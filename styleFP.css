@@ -103,6 +103,7 @@ header a:hover{
   width: 250px;
 }
 .email li{
+ 
   padding: 3px;
   text-align: center;
   text-decoration: none;
@@ -115,8 +116,11 @@ margin-top: 5px;
 height: 25px;
 width: 90px;
 }
-.tel{
-
+.tel {
+  background-color: blue;
+  color: aliceblue;
+text-align: center;
+text-decoration: none;
 }
 @media(max-width:1298px){
    header #titulli,
