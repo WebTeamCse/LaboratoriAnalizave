@@ -14,7 +14,8 @@ body{
 
 .container{
   width: 80%;
-  margin: auto;
+margin-left: 12vw;
+margin-bottom:8vh;
   overflow: hidden;
 }
 
@@ -193,9 +194,29 @@ header nav{
 }
 /******* endNavigavion *******/
 
+.connect ul{
+  display: inline;
+}
+.connect {
+  margin-top: 13px;
+  margin-right: 10px;
+  float: right;
+}
+.connect li{
+  display: inline;
+ cursor: pointer;
+  padding: 10px;
+  font-weight: bolder;
+  font-style: normal;
+  font-family:Arial;
+}
+.connect a{
+  color: white;
+  text-decoration: none;
+}
 
 header a:hover{
-  border-bottom: 4px solid red;
+  border-bottom: 3px solid rgb(168, 168, 168);
   transition: .5s ;
   font-weight:bold;
   font-size: 30px;
@@ -204,7 +225,6 @@ header a:hover{
 .foto {
   min-height: 400px;
   background-image:linear-gradient(rgba(5, 4, 4, 0.788),rgba(0, 0, 0, 0.4)),url("img/back1.jpg");   
- /* filter: brightness(40%);*/
   background-position: 100%;
   text-align: center;
   color: white;
@@ -213,10 +233,10 @@ header a:hover{
   font-style: italic;
 }
 .foto a:hover{
-  border-bottom: 4px solid red;
-  transition: .5s ;
+  border-bottom: 3px solid rgb(168, 168, 168);
+  transition: .3s ;
   font-weight:bold;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .foto h1{
@@ -263,10 +283,16 @@ width: 90px;
 }
 .tel{
   color: white;
+  width: 7%;
+  margin-right: auto;
+  margin-left: auto ;
+  border-radius: 30px;
+
+  margin-bottom: 15px;
   text-align: center;
   text-decoration: none;
   padding: 3px;
-  background-color: rgb(73, 144, 172);
+  background-color: rgb(255, 255, 255);
 }
 .foto ul {
   display: inline;
@@ -280,26 +306,14 @@ width: 90px;
 .callul li{
   display: inline;
 }
-@media(max-width:1298px){
-  
-   header nav,
-   ul li{
-    
-     padding: 3px;
-     text-align: center;
-     display: block;
-   }
-}
-@media(max-width:1298px){
-  
-}
 
 .rrethnesh{
   background-color: white;
+  text-align: center;
 }
-.rrethnesh h1{
+.rrethnesh h1,h2{
   color:black;
-  font-size: 35px;
+  font-size: 25px;
   text-align: center;
   padding: 12px;
 }
