@@ -73,4 +73,16 @@ button.btn-1:hover{
   cursor: pointer;
   background-color: rgb(87, 87, 119);
 }
-
+@media (max-width:1000px) {
+  .register{
+      
+      width: 100%;
+      position: relative;
+      
+  }
+  form{
+    width: 100%;
+      position: relative;
+  }
+  
+}

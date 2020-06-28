@@ -63,7 +63,7 @@ h1{
   width: 125px;
   height: 30px;
   background-color: rgb(66,67,93);
-  border:  rgb(66,67,93);
+  border:  rgb(66,67,93); 
   border-radius: 5px;
   color: white;
   padding: 3px;
@@ -78,4 +78,21 @@ h1{
   color: black;
   cursor: pointer;
 
+}
+@media (max-width:1000px) {
+  .login{
+      
+      width: 100%;
+      position: relative;
+      
+  }
+  form{
+    width: 100%;
+      position: relative;
+  }
+  .buton2{
+    float: left;
+    margin-left: 184px;
+    margin-top: 20px;
+  }
 }
