@@ -23,26 +23,35 @@
 }
 footer p{
   color: white;
+ text-align:center;
 }
 footer ul{
-  width: 500px;
-  padding-left: 254px;
+  width: 14%;
+  
   margin-left: auto ;
   margin-right: auto;
   display: flex;
+  padding-top: 35px;
 }
 footer ul li{
   position: relative;
+  vertical-align: middle;
   display: block;
   color: #666;
   font-size: 30px;
+  padding-left:0px;
   height: 50px;
-  width: 50px;
+  width: 31%;
   background: #262626;
   line-height: 60px;
   border-radius: 50%;
-  margin: 0 15px;
+  margin: 0 5px;
   cursor: pointer;
 
+}
+@media (max-width:900px){
+  footer ul{
+    width:37%;
+  }
 }
        </style>

@@ -90,9 +90,69 @@ h1{
     width: 100%;
       position: relative;
   }
-  .buton2{
+  /* .buton2{
     float: left;
     margin-left: 184px;
     margin-top: 20px;
+  } */
+  div.btn {
+    position: relative;
+    height: 100px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin: 0;
+    padding: 0; */
   }
+  .buton1{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .buton2{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 640px){
+  .login{
+      
+    width: 100%;
+    position: relative;
+    
+}
+form{
+  width: 100%;
+    position: relative;
+}
+/* .buton2{
+  float: left;
+  margin-left: 184px;
+  margin-top: 20px;
+} */
+div.btn {
+  
+  position: relative;
+  height: 100px;
+  width: 36%;
+  margin-right: auto;
+  margin-left: auto;
+  /* margin: 0;
+  padding: 0; */
+}
+.buton1{
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.buton2{
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
 }
