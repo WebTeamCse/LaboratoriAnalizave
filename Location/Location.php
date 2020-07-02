@@ -23,6 +23,7 @@
       </li>
       <li>
       <div class="fotodoctor"></div>
+      
       <div class="description">
         <h2>Gjakove</h2>
         <p>Rruga "Adem Jashari"</p>
