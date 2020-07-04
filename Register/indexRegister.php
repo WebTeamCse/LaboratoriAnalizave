@@ -23,12 +23,13 @@
         $sql = 'INSERT INTO users(name, email, password) VALUES 
         (:name, :email, :password)';
 
-        $query = $conn-> prepare($sql);
-        $query-> bindParam('name', $name);
-        $query-> bindParam('email', $email);
-        $query-> bindParam('password', $password);
-
-        $query-> execute();
+         $query = $conn-> prepare($sql);
+        //Array
+        $query->execute([
+            'name'=> $name,
+            'email'=> $email, 
+            'password'=> $password,
+        ]);
 
         header("Location: ../crud/users.php");
         

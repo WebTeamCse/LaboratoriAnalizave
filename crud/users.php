@@ -22,7 +22,7 @@
         <tr>
             <td><?php echo $user['name']; ?></td>
             <td><?php echo $user['email']; ?></td>
-            <td>Edit | Delete</td>
+            <td> <a href="edit-user.php?id=<?php $user['id']; ?>"> Edit</a> | Delete</td>
         </tr>
         <?php endforeach; ?>
         
