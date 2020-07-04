@@ -7,7 +7,7 @@
 
 ?>
 <div class="container">
-    <h1><a href="add_users.php"></a></h1>
+    <h1><a href="insert-users.php"></a></h1>
     <table border="1">
         <thead>
             <tr>
