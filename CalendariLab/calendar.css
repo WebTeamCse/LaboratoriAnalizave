@@ -90,4 +90,18 @@ padding: 10px 0 ;
 }
 
 
+.notes  {
+    display: flex;
+    height: 50px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+.notes input{
+    width: 100%;
+    text-align: center;
+}
+
 

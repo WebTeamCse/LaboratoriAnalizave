@@ -13,6 +13,7 @@
     color: white;
     background-image: url(../img/back.png) ;
     height: 100vh;
+    background-color: black;
   }
   
 
@@ -24,6 +25,7 @@
   padding: 0px;
   list-style-type: none;
   border-radius: 30px;
+  
 }
 
  form{
@@ -40,7 +42,7 @@ p{
 
 }
 
-input{
+input[type="text"],[type="password"]{
     font-size: 15px;
     padding: 15px 22px;
     margin: 10px 5px;
@@ -52,6 +54,20 @@ input{
 h1{
  margin-top: 185px;
  color: rgb(67,66,93);
+}
+input[type="submit" i]{
+  width: 125px;
+  height: 30px;
+  background-color: rgb(144, 144, 158);
+  border:  rgb(66,67,93);
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  margin-top: -7px;
+}
+input[type="submit" i]:hover{
+  cursor: pointer;
+  background-color: rgb(87, 87, 119);
 }
 .btn{
   margin-top: 90px;

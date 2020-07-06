@@ -41,7 +41,8 @@
         <div class="fotodoctor"></div>
         <div class="description">
           <h2>Prishtin</h2>
-          <p>Rruga "Adem Jashari"</p>
+          < <a href="https://goo.gl/maps/HhazXcVPSJbPYD3F9"> Rruga "Adem Jashari"</a>
+          <p>+38349296609</p>
         </div>
       </li>
       <li>

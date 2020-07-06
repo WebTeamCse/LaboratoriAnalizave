@@ -11,12 +11,12 @@ crossorigin="anonymous"></script>
 
                 <div class="side-nav">
                     <ul>
-                        <li><a href="#">Ballina</a></li>
+                        <li><a href="indexFP.php">Ballina</a></li>
                         <li><a href="Sherbimet.html">Shërbimet</a></li>
-                        <li><a href="#">Terminet</a></li>
-                        <li><a href="#">Mjekët</a></li>
-                        <li><a href="#">Kalendari</a></li>
-                        <li><a href="#">Adresa</a></li>
+                        <li><a href="terminet.php">Terminet</a></li>
+                        <li><a href="doctoret.php">Mjekët</a></li>
+                        <li><a href="calendar.php">Kalendari</a></li>
+                        <li><a href="Location.php">Lokacioni</a></li>
                     </ul>
                 </div>
             </div>

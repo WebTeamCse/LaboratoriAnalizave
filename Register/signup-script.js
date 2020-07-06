@@ -36,7 +36,6 @@ function validateForm() {
           alert("Password shoulden\'t contains one of these (* + / #)");
           return false;
       }
-      alert("OK");
-      event.preventDefault();
+      
       
     }
