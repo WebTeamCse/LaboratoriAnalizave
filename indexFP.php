@@ -81,19 +81,9 @@
         </section>
 
             <?php
-                include "footer.php";
+                include "../footer.php";
             ?>
-        <!-- <footer>
-            
-         <ul >
-            <li><a href="#"><img src="img/instagram.png"></a></li>
-            <li><a href="#"><img src="img/facebook.png"></a></li>
-            <li><a href="#"><img src="img/wifi.png"></a></li>   
-        </ul >
-        <div>
-        <p>Copyright © 2020 Laboratori i Analizave</p>
-        </div>    
-    </footer> -->
+     
     </body>
     
   

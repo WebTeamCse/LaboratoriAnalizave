@@ -1,6 +1,10 @@
 <?php
-// Start the session
-session_start();
+require 'dbconfig.php';
+
+$query = $conn->query('SELECT * FROM users');
+
+$users = $query->fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,6 +20,15 @@ session_start();
         
     </head>
     <body>
+
+    <?php foreach($users as $user):?>
+        <tr>
+            <td><?php echo $user['name']; ?></td>
+            <td><?php echo $user['email']; ?></td>
+            <td> <a href="edit-user.php?id=<?php $user['id']; ?>"> Edit</a> | Delete</td>
+        </tr>
+    <?php endforeach; ?>
+    
         <div class="login">
            
                 <form class="form" id="form" action="/loginLog.html" method="get" onsubmit="return validateForm()">
@@ -32,7 +45,7 @@ session_start();
                         
                 </form>
             
-        </div>
+        </div> 
     
         
     </body>
