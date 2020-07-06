@@ -10,11 +10,17 @@
         (:name, :email, :password)';
 
         $query = $conn-> prepare($sql);
-        $query-> bindParam('name', $name);
-        $query-> bindParam('email', $email);
-        $query-> bindParam('password', $password);
+        // $query-> bindParam('name', $name);
+        // $query-> bindParam('email', $email);
+        // $query-> bindParam('password', $password);
 
-        $query-> execute();
+        // $query-> execute();
+        $query->execute([
+            'name' => $name,
+            'email' => $email,
+            'password' => $password
+        ]);
+
 
         header("Location: users.php");
         
