@@ -2,9 +2,7 @@
 <html>
     <head>
         <title>Calendar</title>
-        <link rel="stylesheet" href="calendar.css">
-
-        
+        <link rel="stylesheet" href="calendar.css">   
     </head>
     <body onload="RenderDate()">
     <?php
@@ -74,10 +72,10 @@
             </div>
         </div>
         <script src="calendar.js"></script>
-        <div class = "Notes">
-      <input type = "text" placeholder = "Notes"> </input>
-      
-</div>
+        
+        <div class = "notes">
+            <input type = "text" placeholder = "Notes"> </input>  
+        </div>
 
 
         <script>
