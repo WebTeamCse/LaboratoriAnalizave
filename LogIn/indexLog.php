@@ -18,7 +18,7 @@
     
         <div class="login">
            
-                <form class="form" id="form" action="welcome.php" method="post" >
+                <form class="form" id="form" onsubmit="return validate()" action="welcome.php" method="post" >
                     <h1>Log In</h1>
                     <p>Welcome back! Please login to your account.</p>
                  

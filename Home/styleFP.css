@@ -90,7 +90,24 @@ height: 100px;
   float: left;
 }
 
-
+button.logout{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+ cursor: pointer;
+  padding: 10px;
+  border: none;
+  font-weight: bolder;
+  font-size: 25px;
+  font-style: normal;
+  font-family:Arial;
+}
+button.logout:hover{
+  border-bottom: 3px solid rgb(168, 168, 168);
+  transition: .3s ;
+  font-weight:bold;
+  font-size: 22px;
+}
 .contact input[type="text"]{
   text-align: center;
   border-radius: 25px;

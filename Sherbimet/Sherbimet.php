@@ -12,7 +12,7 @@
     </head>
     <body>
     <?php
-            include "../header.php";
+            include "../headers.php";
         ?>
 <div class="title">
     <h1>Shërbimet Tona</h1>
