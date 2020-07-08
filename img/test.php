@@ -2,7 +2,7 @@
 require "../crud/dbconfig.php";
 ?>
 <form method="POST">
-<input type="text" name="title" >
+<input type="text" name="title"  >
 
 <!-- <inut type ="file" name="uploadfile"/> -->
     <input type="submit" name="uploadfilesub" value="upload">

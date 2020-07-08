@@ -22,7 +22,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = ""; 
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=cse2020", $username, $password);
