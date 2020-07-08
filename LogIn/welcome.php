@@ -28,7 +28,11 @@
             header("Location: indexLog.php?error=usernameNotFoundOrIncorrectPassword");
             exit();
         }else{
-            $query = $conn->query('SELECT * FROM users');
+            $query = $conn->prepare('SELECT * FROM users WHERE username = :username');
+
+            $query->bindParam(":username", $username);
+            $query->execute();
+
 
             $user = $query->fetchAll();
             foreach($user as $user){
@@ -40,6 +44,7 @@
 
         }
     }
+    
 
     
    
@@ -47,22 +52,58 @@
     // $pwd = "admin";
 
 
-     
-            
     
 
-    if(isset($_SESSION["uname"])){
-        echo "<h1>Welcome" .$_SESSION['uname'] . "</h1>";
-        echo "<a href='product.php'>Product</a><br>";
-        echo "<br><a href='logout.php'><input type=button name=logout value=logout></a>";
-    }else{
-        if($_POST['uname']==$uname && $_POST['pwd']==$pwd){
-            $_SESSION['uname']=$uname;
-           
-            echo "<script>location.href='welcome.php'</script>";
-        }else{
-            echo "<script>alert('username or password incorrect!')</script>";
-            echo "<script>location.href='indexLog.php'</script>";
-        }
-    }
-?> 
+    
+   //profile
+  //all rows
+//    $query = 'SELECT * FROM users';
+
+//    $data = $conn->query($query);
+
+   
+    // echo '
+    // <table border=1>
+    // <tr>
+    //     <th>NAME</th>
+    //     <th>USERNAME</th>
+    //     <th>EMAIL</th>
+    // </tr>  '
+    // foreach($data as $row){
+
+    // echo '<tr>
+    //     <td>'.$row['name'] .'</td>
+    //     <td>'.$row['username'] .'</td>
+    //     <td>'.$row['email'] .'</td>
+    // </tr>  '}' 
+    // </table>'
+   
+
+   //single row
+//    $statment = $conn->prepare("SELECT * FROM users WHERE username = :username ");
+
+//    $statment->execute(array(
+//        'username' => 'muli'
+//    ));
+
+//    echo '
+//     <table border=1>
+//     <tr>
+//         <th>NAME</th>
+//         <th>USERNAME</th>
+//         <th>EMAIL</th>
+//     </tr>  '
+//     foreach($statment as $row){
+
+//     echo '<tr>
+//         <td>'.$row['name'] .'</td>
+//         <td>'.$row['username'] .'</td>
+//         <td>'.$row['email'] .'</td>
+//     </tr>  '}' 
+//     </table>'
+       
+//     $_SESSION["name"]=$row['name'];
+ ?>
+   
+            
+    

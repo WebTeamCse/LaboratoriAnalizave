@@ -1,8 +1,11 @@
 
-
+<?php
+     session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
+    
         <meta charset="utf-8">
         <title>Log In</title>
         <link rel="stylesheet" type="text/css" href="styleLog.css">
@@ -31,6 +34,10 @@
                     </div>
                         
                 </form>
+                <?php
+
+                   
+                ?>
             
         </div> 
     

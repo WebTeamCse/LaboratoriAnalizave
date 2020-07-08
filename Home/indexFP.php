@@ -1,5 +1,7 @@
 <?php 
     session_start();
+
+    var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,6 +89,11 @@
                 </ul>
 
 
+            </div>
+            <div class="section2">
+                <?php
+                    include "../Login/profile.php";
+                ?>
             </div>
         </section>
 

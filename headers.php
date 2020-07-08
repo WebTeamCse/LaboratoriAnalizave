@@ -21,9 +21,6 @@ crossorigin="anonymous"></script>
                     </ul>
                 </div>
             </div>
-                        <div class="toggle">
-                            <div class="hamburger"></div>
-        </div>
 
     <div class="container">
 
@@ -179,7 +176,7 @@ header nav{
     }
 }
 
-@media(max-width:1298px) {
+@media(max-width:1298px) {  
     .home-app {
         display: block;
     }

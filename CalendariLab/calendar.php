@@ -8,6 +8,7 @@
     <?php
     include "../headers.php";
     ?>
+    
         <div class="wrapper">
             <div class="calendar">
                 <div class="month">
