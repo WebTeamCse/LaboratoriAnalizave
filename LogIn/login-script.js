@@ -1,9 +1,7 @@
 
 
 function validate() {
-  var name = document.getElementById("name");
-  
-
+  var username = document.getElementById("email");
   var password = document.getElementById("password");
     // let includex = x.include("+");
     // if(includex == true){

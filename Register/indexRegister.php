@@ -48,7 +48,7 @@
               <input type="text" id="name" name="name" placeholder="Shenoni emrin"><br>
             <input type="text" name="email" id="email" placeholder="Shenoni email"><br>
             <input type="text" id="username" name="username" placeholder="Shenoni username"><br>
-            <input type="password" id="password" name="password" placeholder="Shenoni password">
+            <input type="password" id="password" name="password" placeholder="Shenoni password"><br>
             <input type="submit" name="submit" value="ruaj shenimet">
             
             </div>   
