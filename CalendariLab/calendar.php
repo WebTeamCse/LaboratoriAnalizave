@@ -72,13 +72,28 @@
             </div>
         </div>
         <script src="calendar.js"></script>
-        
+
         <div class = "notes">
             <input type = "text" placeholder = "Notes"> </input>  
         </div>
+        <div class = "submit">
+        <input type = "submit " >
+</div>
+<div>
+<form>
+<input type="text" name="title">
 
+<inut type ="file" name="uploadfile"/>
+    <input type="submit" name="uploadfilesub" value="upload"/>
 
-        <script>
+ </form>
+ <?php
+  $name = $_POST["uploadfilesub"] ;
+  echo $name;
+  
+ ?>
+</div>
+        <script> 
                 
                 $('.toggle').click(function() {
         
@@ -88,11 +103,24 @@
                     
                 
         </script>
+
         
         <?php
-                include "../footer.php";
+
+// $conn = mysqli_connect("localhost","root", "" , "uploadFile");
+// if($conn){
+//     echo "connected";
+//}
+
+
+
+               
             ?>
-        
+            <footer>
+            <?php
+                 include "../footer.php";
+            ?>
+            </footer>
         
     </body>
 </html>

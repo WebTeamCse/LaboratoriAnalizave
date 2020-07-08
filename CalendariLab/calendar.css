@@ -103,5 +103,30 @@ padding: 10px 0 ;
     width: 100%;
     text-align: center;
 }
+.submit  {
+    margin-left: 1000px;
+    margin-bottom: 53px;
+    position: relative;
+
+}
+.submit input{
+    width: 40%;
+    text-align: center;
+}
+form{
+    
+    height: 50px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+.footer{
+    width: 100%;
+}
+
+
+
 
 
