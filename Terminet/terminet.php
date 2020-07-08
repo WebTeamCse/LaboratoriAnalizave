@@ -7,7 +7,7 @@
 
 <body>
     <?php
- include '../header.php';
+ include '../headers.php';
  ?>
 
     <div class="container">

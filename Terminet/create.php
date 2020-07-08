@@ -13,22 +13,22 @@
         <div class="content">
             <img src="../img/terminimage.jpg" alt="header-image" class="cld-responsive">
          
-            <form>
-                <input type="text" placeholder="Name & Surname">
+            <form action="insert.php" method="post">
+                <input type="text" placeholder="Name & Surname" name="name">
                 <div class="beside">
-                    <input type="text" placeholder="Phone Number">
+                    <input type="text" placeholder="Phone Number" name="phone">
                 </div>
                 <div>
-                    <select class="selectgender"> 
+                    <select class="selectgender" name="selectdoctor"> 
                         <option>No one</option>
                         <option>Filan</option>
                         <option>Fisteku</option>
                         <option>Fidan</option>
                     </select>
                 </div>
-                <input type="email" placeholder="Email Address">
+                <input type="email" placeholder="Email Address" name="email">
                 <div class="createbutton">
-                    <button type="button">Create</button>
+                    <button type="submit" name="submit">Submit</button>
                 </div>
             </form>
         </div>

@@ -1,4 +1,8 @@
+<?php 
+    session_start();
 
+    
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,17 +14,25 @@
     </head>
     <body>
         <?php
-            include "../header.php";
+            include "../headers.php";
         ?>
       
         <section class="foto">
-                    <div >
+            <?php 
+                if(isset($_SESSION['userId'])){
+                    include "logout.php";
+                }else{
+                    include "login.php";
+                }
+            ?>
+            
+                    <!-- <div >
                         <ul class="connect">
-                            <li class="login"> <a href="../LaboratoriAnalizave/LogIn/indexLog.html">Log In </a></li>
-                            <li class="signup"> <a href="../LaboratoriAnalizave/Register/indexRegister.html">Sign Up</a></li>
+                            <li class="login"> <a href="../LaboratoriAnalizave/LogIn/indexLog.php">Log In </a></li>
+                            <li class="signup"> <a href="../LaboratoriAnalizave/Register/indexRegister.php">Sign Up</a></li>
                           </ul>
                        
-                    </div>
+                    </div> -->
 
                    
                     <div class="container">
@@ -78,22 +90,17 @@
 
 
             </div>
+            <div class="section2">
+                <?php
+                    include "../Login/profile.php";
+                ?>
+            </div>
         </section>
 
             <?php
                 include "../footer.php";
             ?>
-        <!-- <footer>
-            
-         <ul >
-            <li><a href="#"><img src="img/instagram.png"></a></li>
-            <li><a href="#"><img src="img/facebook.png"></a></li>
-            <li><a href="#"><img src="img/wifi.png"></a></li>   
-        </ul >
-        <div>
-        <p>Copyright © 2020 Laboratori i Analizave</p>
-        </div>    
-    </footer> -->
+        
     </body>
     
   

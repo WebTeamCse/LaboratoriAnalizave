@@ -6,8 +6,9 @@
     </head>
     <body onload="RenderDate()">
     <?php
-    include "../header.php";
+    include "../headers.php";
     ?>
+    
         <div class="wrapper">
             <div class="calendar">
                 <div class="month">

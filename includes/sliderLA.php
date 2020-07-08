@@ -6,41 +6,41 @@
           
             <div class="slides">
               <div id="slide-1">
-              <img src="img/Galery3.PNG" alt="">
+              <img src="../includes/Galery3.PNG" alt="">
               </div>
               <div id="slide-2">
-              <img src="img/galery2.PNG" alt="photo">
-             
+              <img src="../includes/galery2.PNG" alt="photo">
+
               </div>
               <div id="slide-3">
-              <img src="img/Galery1.PNG" alt="photo">
+              <img src="../includes/Galery1.PNG" alt="photo">
               </div>
               <div id="slide-4">
-              <img src="img/galery2.PNG" alt="photo">
+              <img src="../includes/galery2.PNG" alt="photo">
               </div>
               <div id="slide-5">
-              <img src="img/Galery3.PNG" alt="photo">
+              <img src="../includes/Galery3.PNG" alt="photo">
               </div>
               <div id="slide-6">
-              <img src="img/Galery1.PNG" alt="photo">
+              <img src="../includes/Galery1.PNG" alt="photo">
               </div>
               <div id="slide-7">
-              <img src="img/galery2.PNG" alt="photo">
+              <img src="../includes/galery2.PNG" alt="photo">
               </div>
               <div id="slide-8">
-              <img src="img/Galery3.PNG" alt="photo">
+              <img src="../includes/Galery3.PNG" alt="photo">
               </div>
               
             </div>
             <div class="thumbs">
-            <a href="#slide-1"><img src="img/Galery3.PNG" alt="photo"></a>
-            <a href="#slide-2"><img src="img/galery2.PNG" alt="photo"></a>
-            <a href="#slide-3"><img src="img/Galery1.PNG" alt="photo"></a>
-            <a href="#slide-4"><img src="img/Galery3.PNG" alt="photo"></a>
-            <a href="#slide-5"><img src="img/galery2.PNG" alt="photo"></a>
-            <a href="#slide-6"><img src="img/Galery1.PNG" alt="photo"></a>
-            <a href="#slide-7"><img src="img/Galery3.PNG" alt="photo"></a>
-            <a href="#slide-8"><img src="img/galery2.PNG" alt="photo"></a>
+            <a href="#slide-1"><img src="../includes/Galery3.PNG" alt="photo"></a>
+            <a href="#slide-2"><img src="../includes/galery2.PNG" alt="photo"></a>
+            <a href="#slide-3"><img src="../includes/Galery1.PNG" alt="photo"></a>
+            <a href="#slide-4"><img src="../includes/Galery3.PNG" alt="photo"></a>
+            <a href="#slide-5"><img src="../includes/galery2.PNG" alt="photo"></a>
+            <a href="#slide-6"><img src="../includes/Galery1.PNG" alt="photo"></a>
+            <a href="#slide-7"><img src="../includes/Galery3.PNG" alt="photo"></a>
+            <a href="#slide-8"><img src="../includes/galery2.PNG" alt="photo"></a>
             </div>
           </div>
 </html>
