@@ -15,13 +15,28 @@
     <body>
     <?php
     require '../crud/dbconfig.php';
-
     
+
+   
+
     if(isset($_POST["submit"])){
         $name = $_POST['name'];
         $email = $_POST['email'];
         $username = $_POST['username'];
         $password = $_POST['password'];
+
+          //Checking if the username that already exists in the DataBase
+     $statment = $conn->prepare("SELECT COUNT(*) FROM users WHERE username = :username ");
+     $statment->bindParam(":username", $username);
+     $statment->execute();
+     $userCheck = $statment->fetchColumn();
+
+     if($userCheck == 1){
+         header("Location: indexRegister.php?error=nameAlreadyTaken");
+         exit();
+     }
+     //exit
+
 
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -38,8 +53,11 @@
         ]);
 
         header("Location: ../Login/indexLog.php");
+
+        
         
     }
+    
     ?>
     <div class="register">
         <form class="form" onsubmit="return validate()" id="form" action="indexRegister.php" method="post">
