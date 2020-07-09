@@ -21,18 +21,14 @@
             <?php 
                 if(isset($_SESSION['userId'])){
                     include "logout.php";
+                    if($_SESSION['userId'] == 10){
+                    include "admin.php";
+                }
                 }else{
                     include "login.php";
                 }
+               // var_dump($_SESSION['userId']);
             ?>
-            
-                    <!-- <div >
-                        <ul class="connect">
-                            <li class="login"> <a href="../LaboratoriAnalizave/LogIn/indexLog.php">Log In </a></li>
-                            <li class="signup"> <a href="../LaboratoriAnalizave/Register/indexRegister.php">Sign Up</a></li>
-                          </ul>
-                       
-                    </div> -->
 
                    
                     <div class="container">
