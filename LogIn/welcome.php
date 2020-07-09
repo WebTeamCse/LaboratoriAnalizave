@@ -48,6 +48,8 @@
             header("Location: ../Home/indexFP.php?success=loginSuccess");
 
         }
+
+        
         
         // if($password !== $dbPassword){
         //     header("Location: indexLog.php?error=usernameNotFoundOrIncorrectPassword");

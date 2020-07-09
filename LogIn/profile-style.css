@@ -1,0 +1,14 @@
+div.section2{
+    position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 37px;     
+      color: white;
+      border-radius: 26px;
+      font-size: 28px;
+      font-weight: bold;
+  }
+ div.main{
+    width: 100%;
+    background-color: #85a9ae;
+ }

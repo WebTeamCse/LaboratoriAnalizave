@@ -8,11 +8,12 @@
 
   
  ?>
+ <link rel="stylesheet" type="text/css" href="profile-style.php"> 
 
 <?php foreach($userInfo as $user): ?>
 
-        
-          <h1>Account Info</h1>
+        <div class="main">
+          <h3>Account Info</h3><br>
           <div class="name">
             <label for="">Name: </label>
             <Label><?php echo $user["name"];?></Label>
@@ -26,7 +27,7 @@
             <label> Email: </label>
             <Label><?php echo $user['email'];?></Label>
           </div>
-
+        </div>
          
         
   <?php endforeach; ?> 

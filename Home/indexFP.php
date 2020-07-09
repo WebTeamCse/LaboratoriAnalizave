@@ -38,12 +38,12 @@
                     <div class="container">
                         <h1>" Happiness is the highest form of health"</h1>    
                     </div>
-            <section class="tel">
+            <!-- <section class="tel">
                         <ul class="callul">
                             <li><a href="#"><img class="scroll" src="../img/call3.png"></a></li>
                         </ul>
     
-            </section>
+            </section> -->
                 </section>
 
                 
