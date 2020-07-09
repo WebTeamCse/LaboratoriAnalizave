@@ -92,7 +92,12 @@
             </div>
             <div class="section2">
                 <?php
+                if(isset($_SESSION['userId'])){
                     include "../Login/profile.php";
+                }else{
+                    //header("location:../Home/indexFP.php");
+                }
+                    
                 ?>
             </div>
         </section>
