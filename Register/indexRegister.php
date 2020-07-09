@@ -23,6 +23,8 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
         $sql = 'INSERT INTO users(name, email,username, password) VALUES 
         (:name, :email,:username, :password)';
 
@@ -32,8 +34,7 @@
             'name' => $name,
             'email' => $email,
             'username' => $username,
-
-            'password' => $password
+            'password' => $hashedPassword
         ]);
 
         header("Location: ../Login/indexLog.php");

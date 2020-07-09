@@ -14,6 +14,11 @@ require "../crud/dbconfig.php";
 }else{
     echo "spo ban";
 }
+
+$password = 'password';
+
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        echo $hashedPassword;
   
   
  ?>

@@ -24,7 +24,12 @@
         $stmt->bindParam(":username",$username);
         $stmt->execute();
         $dbPassword = $stmt->fetchColumn();
-        if($password !== $dbPassword){
+
+        $passwordCheck = password_verify($password, $dbPassword);
+
+       
+
+        if($passwordCheck !== true){
             header("Location: indexLog.php?error=usernameNotFoundOrIncorrectPassword");
             exit();
         }else{
@@ -43,6 +48,26 @@
             header("Location: ../Home/indexFP.php?success=loginSuccess");
 
         }
+        
+        // if($password !== $dbPassword){
+        //     header("Location: indexLog.php?error=usernameNotFoundOrIncorrectPassword");
+        //     exit();
+        // }else{
+        //     $query = $conn->prepare('SELECT * FROM users WHERE username = :username');
+
+        //     $query->bindParam(":username", $username);
+        //     $query->execute();
+
+
+        //     $user = $query->fetchAll();
+        //     foreach($user as $user){
+        //         $_SESSION['userId'] = $user['id'];
+        //         $_SESSION['username'] = $user['username'];
+                
+        //     }
+        //     header("Location: ../Home/indexFP.php?success=loginSuccess");
+
+        // }
     }
     
 
