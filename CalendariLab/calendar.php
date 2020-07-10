@@ -84,18 +84,8 @@
         <input type = "submit " >
 </div>
 <div>
-<form>
-<input type="text" name="title">
 
-<inut type ="file" name="uploadfile"/>
-    <input type="submit" name="uploadfilesub" value="upload"/>
-
- </form>
- <?php
-  $name = $_POST["uploadfilesub"] ; 
-  echo $name;
-  
- ?>
+ 
 </div>
         <script> 
                 
@@ -108,18 +98,42 @@
                 
         </script>
 
-        
         <?php
+        include("config.php");
+        if(isset($_POST['btn-add']))
+        {
+            $image=$_FILES['profile']['name'];
+            $name=$_FILES['profile']['name'];
+            $tmp_dir=$_FILES['profile']['tmp_name'];
+            $imageSize=$_FILES['profile']['size'];
+            
 
-// $conn = mysqli_connect("localhost","root", "" , "uploadFile");
-// if($conn){
-//     echo "connected";
-//}
+            $upload_dir='CalendariLab' ;
+            $imgExt=strtolower(pathinfo($image,PATHINFO_EXTENSION));
+            $valid_extensions=array('jpeg','jpg','png','gif','pdf');
+            $picProfile=rand(1000,1000000).".".$imgExt;
+            move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
+            $stmt=$db_conn->prepare('INSERT INTO  upload(username,picProfile)VALUES(:uname,:upic)');
+            $stmt->bindParam(':uname',$name);
+            $stmt->bindParam(':upic',$picProfile);
+            
+
+        }
+       ?>
+        <div class= "container">
+            <div class ="add-form">
+                <h1 class="text-center">Please Insert new Item image</h1>
+                <form method="post" enctype="multipart/form-data">
+                <label>User Name</label>
+                <input type ="text" name="user_name" class = "form-control" required="">
+                <label>Picture</label>
+                <input type="file" name="profile" class="form-cotrol" required="" accept="*/image">
+                <button type ="submit" name="btn-add"> Add New </button>
+                    </form>
+                    </div>
+                    </div>
 
 
-
-               
-            ?>
             <footer>
             <?php
                  include "../footer.php";
