@@ -10,10 +10,21 @@
     <div >
         <ul class="connect">
              <!-- <li class="logout"> <a href="../LaboratoriAnalizave/LogIn/login.php">Log out </a></li>  -->
-            <form action="" method="POST">
+            <form action="admin.php" method="POST">
             <button class="logout" name="admin">Admin</button>
-            </form>
+            </form> 
+            
         </ul>
     </div>
 </body>
 </html>
+<style>
+    div.users{
+        border:0;
+        margin:0;
+        width:100%;
+    }
+    table{
+        width:100%;
+    }
+</style>

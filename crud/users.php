@@ -2,21 +2,19 @@
 //Select all from users
     require 'dbconfig.php';
 
-    $query = $conn->query('SELECT * FROM users');
+    $query = $conn->query('SELECT * FROM sms');
 
     $users = $query->fetchAll();
 
 ?>
 <div class="container">
     <h1><a href="insert-users.php"></a></h1>
-    <table border="1">
+    <table border="1" style="border:0;">
         <thead>
             <tr>
-                <th>Emri</th>
-                <th>E-mail</th>
-                <th>username</th>
-
-                <th>password</th>
+                <th>content</th>
+                <th>user_id</th>
+               
             </tr>
         </thead>
 
@@ -24,11 +22,9 @@
         <?php foreach($users as $user):?>
         
         <tr>
-            <td><?php echo $user['name']; ?></td>
-            <td><?php echo $user['email']; ?></td>
-            <td><?php echo $user['username']; ?></td>
-            <td><?php echo $user['username']; ?></td>
-            <!-- <td> <a href="edit-user.php?id=<?php $user['id']; ?>"> Edit</a> | Delete</td> -->
+            <td><?php echo $user['content']; ?></td>
+            <td><?php echo $user['user_id']; ?></td>
+            <!-- <td> <a href="edit-user.php?id="> Edit</a> | Delete</td> -->
         </tr>
         <?php endforeach;
         ?>
@@ -66,11 +62,11 @@
 //Select single records using prepare statment -->
         <?php foreach($users as $user):?>
           <?php 
-           if($user['name']=='Vigan'){
-               $_POST['names']= $user['name'];
-           echo $user['name']; 
-           echo $_POST['names'];
-           }
+        //    if($user['name']=='Vigan'){
+        //        $_POST['names']= $user['name'];
+        //    echo $user['name']; 
+        //    echo $_POST['names'];
+        //    }
            ?>
            
         <?php endforeach;
