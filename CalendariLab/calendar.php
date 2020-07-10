@@ -102,20 +102,30 @@
         include("config.php");
         if(isset($_POST['btn-add']))
         {
-            $image=$_FILES['profile']['name'];
-            $name=$_FILES['profile']['name'];
+            $name = $_POST["user_name"];
+            
+           $image=$_FILES['profile']['name'];
+            $name1=$_FILES['profile']['name'];
             $tmp_dir=$_FILES['profile']['tmp_name'];
-            $imageSize=$_FILES['profile']['size'];
+           // $imageSize=$_FILES['profile']['size'];
+            // var_dump($_FILES['profile']['name']);
+            // var_dump($_FILES['profile']['name']);
+            // var_dump($_FILES['profile']['tmp_name']);
+            // var_dump($_FILES['profile']['size']);
             
 
-            $upload_dir='CalendariLab' ;
-            $imgExt=strtolower(pathinfo($image,PATHINFO_EXTENSION));
-            $valid_extensions=array('jpeg','jpg','png','gif','pdf');
-            $picProfile=rand(1000,1000000).".".$imgExt;
-            move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
-            $stmt=$db_conn->prepare('INSERT INTO  upload(username,picProfile)VALUES(:uname,:upic)');
+           $upload_dir='CalendariLab' ;
+           $imgExt=strtolower(pathinfo($image,PATHINFO_EXTENSION));
+          // $valid_extensions=array('jpeg','jpg','png','gif','pdf');
+           $picProfile=rand(1000,1000000).".".$imgExt;
+           move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
+
+            $stmt=$db_conn->prepare('INSERT INTO  Upload(username,picProfile)VALUES(:uname,:upic) LIMIT 1');
             $stmt->bindParam(':uname',$name);
             $stmt->bindParam(':upic',$picProfile);
+            $stmt->execute();
+            // header('Location:calendar.php');
+            // exit();
             
 
         }
@@ -123,9 +133,9 @@
         <div class= "container">
             <div class ="add-form">
                 <h1 class="text-center">Please Insert new Item image</h1>
-                <form method="post" enctype="multipart/form-data">
+                <form  action= "calendar.php" method="post" enctype="multipart/form-data">
                 <label>User Name</label>
-                <input type ="text" name="user_name" class = "form-control" required="">
+                <input type ="text" name="user_name" class="form-control" required="">
                 <label>Picture</label>
                 <input type="file" name="profile" class="form-cotrol" required="" accept="*/image">
                 <button type ="submit" name="btn-add"> Add New </button>
