@@ -1,79 +1,92 @@
 <?php
-//Select all from users
+
     require 'dbconfig.php';
-
-    $query = $conn->query('SELECT * FROM sms');
-
+    $query = $conn->query('SELECT users.id , 
+           users.name , 
+           users.username , 
+           sms.user_id , 
+           sms.content
+    FROM users INNER JOIN sms on users.id = sms.user_id');
     $users = $query->fetchAll();
-
 ?>
-<div class="container">
-    <h1><a href="insert-users.php"></a></h1>
-    <table border="1" style="border:0;">
-        <thead>
+    <html>
+        <head>
+
+        </head>
+        <body>
+
+        <table id="demo" border='1'>
             <tr>
-                <th>content</th>
-                <th>user_id</th>
-               
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>User SMS</th>
             </tr>
-        </thead>
-
-        <tbody>
         <?php foreach($users as $user):?>
-        
         <tr>
-            <td><?php echo $user['content']; ?></td>
-            <td><?php echo $user['user_id']; ?></td>
-            <!-- <td> <a href="edit-user.php?id="> Edit</a> | Delete</td> -->
+            <td><?php echo $user['id'];?></td>
+            <td><?php echo $user['name'];?></td>
+            <td><?php echo $user['content'];?></td>
         </tr>
-        <?php endforeach;
-        ?>
-             </tbody>
-    </table>
-
-
-
+        <?php endforeach;?>
+</table>
+           
+                
+            
+        </body>
+    </html>
     <?php
 
-//Select single records using prepare statment
-// $statement = $conn->prepare("SELECT * FROM users WHERE id=
-// :id");
-
-// $statement->execute(array(
-//     ':id'   => 19
-// ));
-
-// echo '<table border=1px;>
-// <tr>
-//                 <th>Emri</th>
-//                 <th>E-mail</th>
-                 
-//             </tr>';
-//     foreach($statement as $user){
-//      echo '   <tr>
-//         <td>' .$user['name'].' </td>
-//         <td>' .$user['password'].' </td>
-//     </tr>';
-
-//     }
-//     echo '</table>';
-// ?>
-<!-- 
-//Select single records using prepare statment -->
-        <?php foreach($users as $user):?>
-          <?php 
-        //    if($user['name']=='Vigan'){
-        //        $_POST['names']= $user['name'];
-        //    echo $user['name']; 
-        //    echo $_POST['names'];
-        //    }
-           ?>
-           
-        <?php endforeach;
-        ?>
-     
+//     //$query = $conn->query('SELECT * FROM sms');
+//     $query = $conn->prepare('SELECT users.id , 
+//        users.name , 
+//        users.username , 
+//        sms.user_id , 
+//        sms.content
+// FROM users INNER JOIN sms on users.id = sms.user_id');
     
-   
-</div>
+//     $query->execute();
+//     while (($row = $query->fetch(PDO::FETCH_ASSOC)) !== false) {
+//         print_r($row);
+        
+//         /* will output:
+//            Array (
+//               'p_id' => 'value'
+//               'p_text' => 'value'
+//               'p_user_id' => 'value'
+//               'u_id' => 'value',
+//               'u_name' => 'value'
+//            )
+//         So now you need to decide how to create your objects with the information returned
+//         */
+//      }
+?>
 
 
+<?php
+//Select all from users
+    //require 'dbconfig.php';
+
+    //$query = $conn->query('SELECT * FROM sms');
+//     $query = $conn->prepare('SELECT users.id , 
+//        users.name , 
+//        users.username , 
+//        sms.user_id , 
+//        sms.content
+// FROM users INNER JOIN sms on users.id = sms.user_id');
+    
+//     $query->execute();
+//     while (($row = $query->fetch(PDO::FETCH_ASSOC)) !== false) {
+//         print_r($row);
+        
+        /* will output:
+           Array (
+              'p_id' => 'value'
+              'p_text' => 'value'
+              'p_user_id' => 'value'
+              'u_id' => 'value',
+              'u_name' => 'value'
+           )
+        So now you need to decide how to create your objects with the information returned
+        */
+    //  }
+?>

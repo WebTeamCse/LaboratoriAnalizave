@@ -10,7 +10,7 @@
     <div >
         <ul class="connect">
              <!-- <li class="logout"> <a href="../LaboratoriAnalizave/LogIn/login.php">Log out </a></li>  -->
-            <form action="admin.php" method="POST">
+            <form action="adminPage.php" method="POST">
             <button class="logout" name="admin">Admin</button>
             </form> 
             
