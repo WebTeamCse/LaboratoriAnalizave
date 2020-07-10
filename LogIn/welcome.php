@@ -45,7 +45,7 @@
                 $_SESSION['username'] = $user['username'];
                 
             }
-            header("Location: ../Home/indexFP.php?success=loginSuccess");
+            header("Location: ../Home/index.php?success=loginSuccess");
 
         }
 
@@ -67,7 +67,7 @@
         //         $_SESSION['username'] = $user['username'];
                 
         //     }
-        //     header("Location: ../Home/indexFP.php?success=loginSuccess");
+        //     header("Location: ../Home/index.php?success=loginSuccess");
 
         // }
     }

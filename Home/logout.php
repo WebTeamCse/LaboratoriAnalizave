@@ -5,8 +5,8 @@
         session_destroy();
 
        
-        // header("Location: indexFP.php");
-        echo '<script language="javascript">window.location.href ="indexFP.php"</script>';
+        // header("Location: index.php");
+        echo '<script language="javascript">window.location.href ="index.php"</script>';
     }
 
 ?>

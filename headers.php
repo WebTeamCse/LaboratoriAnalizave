@@ -12,7 +12,7 @@ crossorigin="anonymous"></script>
 
                 <div class="side-nav">
                     <ul>
-                        <li><a href="../Home/indexFP.php">Ballina</a></li>
+                        <li><a href="../Home/index.php">Ballina</a></li>
                         <li><a href="../Sherbimet/Sherbimet.php">Shërbimet</a></li>
                         <li><a href="../Terminet/terminet.php">Terminet</a></li>
                         <li><a href="../Doctoret/doctoret.php">Mjekët</a></li>
