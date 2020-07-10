@@ -1,7 +1,6 @@
 <?php 
     session_start();
-
-    
+    require '../crud/dbconfig.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,21 +27,39 @@
                     include "login.php";
                 }
                // var_dump($_SESSION['userId']);
+
+
+               //Contact US
+               
+              
+            //    $_POST['userID'] = $_SESSION['userId'];
+              //var_dump($_SESSION['userId']);
+               if(isset($_POST["submit"])){
+                   $sms = $_POST['sms'];
+
+                   $sql = 'INSERT INTO sms(content, user_id) VALUES 
+                   (:content, :user_id)';
+           
+                    $query = $conn-> prepare($sql);
+                    // $query->bindParam(":sms", $sms);
+                    // $query->bindParam(":user_id",$_POST['userID']);
+                    // $query->execute();
+                   //Array
+                   $query->execute([
+                       'content' => $sms,
+                       'user_id' => $_SESSION['userId']
+                   ]);
+           
+                   echo '<script language="javascript">window.location.href ="indexFP.php"</script>';
+               }
             ?>
 
                    
                     <div class="container">
                         <h1>" Happiness is the highest form of health"</h1>    
                     </div>
-            <!-- <section class="tel">
-                        <ul class="callul">
-                            <li><a href="#"><img class="scroll" src="../img/call3.png"></a></li>
-                        </ul>
-    
-            </section> -->
+       
                 </section>
-
-                
 
         <section class="contact">
             <div class="talk">
@@ -50,10 +67,11 @@
             </div>
             <ul class="email">
                 
-               <li> <p>Kontaktoni me ne! </p> </li>  
-               <form id="form" action="/indexFP.php" method="get" onsubmit="return validateForm()">  
+               <li> <p>Kontaktoni me ne! </p> </li> 
+
+               <form id="form" action="indexFP.php" method="post" onsubmit="return validateForm()">  
                <li><input type="text" id="sms" name="sms" placeholder="SMS"></li>
-                <li><button class="send" type="submit" class="Subscibe">Dërgo</button></li>             
+                <li><button class="send" type="submit" name="submit">Dërgo</button></li>             
                 </form>
             </ul>         
         </section>
