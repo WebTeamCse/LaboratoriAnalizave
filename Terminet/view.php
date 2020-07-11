@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <?php
- include '../header.php';
- ?>
+<?php
+    include "../headers.php";
+    ?>
 
     <div class="container">
 
@@ -64,8 +64,8 @@
     </div>
 
     <?php
- include '../footer.php';
- ?>
+  include '../footer.php';
+  ?>
 </body>
 
 </html>

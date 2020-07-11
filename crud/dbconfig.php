@@ -24,6 +24,7 @@ $servername = "localhost";
 $username = "root";
 $password = ""; 
 
+
 try {
   $conn = new PDO("mysql:host=$servername;dbname=cse2020", $username, $password);
   // set the PDO error mode to exception

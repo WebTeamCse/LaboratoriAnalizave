@@ -16,8 +16,6 @@
 
 
 
-
-
 <!DOCTYPE html>
 <html>
 
@@ -26,9 +24,9 @@
 </head>
 
 <body>
-    <?php
- include '../header.php';
- ?>
+<?php
+    include "../headers.php";
+    ?>
     <div class="container">
         <div class="content">
             <img src="../img/terminimage.jpg" alt="header-image" class="cld-responsive">

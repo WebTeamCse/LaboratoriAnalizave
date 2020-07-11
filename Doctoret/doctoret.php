@@ -3,46 +3,44 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="doctoret.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <?php
   include '../headers.php';
   ?>
-  <div class="X">
+  <div class="doctorDiv">
 
     <ul class="doctorlist">
       <li>
-        <div class="fotodoctor"></div>
+        <div><img src="doctorimage/gjaku.jpg" class="fotodoctor"></div>
         <div class="description">
-          <h2>Lorem Ipsom Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, optio suscipit quibusdam placeat
-            facere saepe ea fugiat, a iste assumenda, neque voluptatum animi ullam ipsum excepturi, provident similique
-            odit voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ratione repellendus
-            aspernatur. Natus quis beatae delectus veniam neque quidem. Explicabo eaque dolor, iste fugiat sint.
-            Inventore fugit harum nostrum, fugiat?</p>
+            <h4 class="member-title">Njazi Luma</h4>
+            <p><strong>Email: </strong>njaziluma@gmail.com</p>
+            <p><strong>Phone: </strong> 075846390837</p>
+            <p><strong>Description: </strong> Analiza t'gjakut</p>
+        
         </div>
       </li>
       <li>
-        <div class="fotodoctor"></div>
+        <div><img src="doctorimage/gjendrave.jpg" class="fotodoctor"></div>
         <div class="description">
-          <h2>Lorem Ipsom Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ipsam, quidem quo illo sunt totam dolorem
-            minus facere, optio soluta, libero repellendus voluptatibus est recusandae magnam tempora accusantium veniam
-            placeat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero voluptatum, ex tempora odio omnis
-            nulla iure ut tenetur et molestias nam. Magni, alias! Incidunt itaque quibusdam a eligendi architecto
-            accusamus.</p>
+        <h4 class="member-title">Bardh Krasniqi</h4>
+            <p><strong>Email: </strong>bardh.krasniqi@hotmail.com</p>
+            <p><strong>Phone: </strong> 940375597483993</p>
+            <p><strong>Description: </strong> Analiza t'gjendrrave</p>
         </div>
       </li>
       <li>
-        <div class="fotodoctor"></div>
+        <div><img src="doctorimage/alergjis.jpg" class="fotodoctor"></div>
         <div class="description">
-          <h2>Lorem Ipsom Dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione laborum molestiae optio atque deserunt ut
-            doloremque, veniam possimus eum sed, quas eius excepturi neque pariatur voluptate obcaecati nostrum eligendi
-            nisi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi eveniet inventore voluptatum, quam
-            quibusdam quia aut soluta doloremque perferendis. In repudiandae officiis eius nostrum sint voluptatem
-            voluptas quod fugiat fuga?</p>
+          <h4 class="member-title">Agim Bytyqi</h4>
+            <p><strong>Email: </strong>agimbytyqi@outlock.com</p>
+            <p><strong>Phone: </strong> 09612327552747 </p>
+            <p><strong>Description: </strong> Analiza t'alergjis</p>
         </div>
       </li>
     </ul>

@@ -2,8 +2,10 @@
   display: inline-block;
   padding: 10px;
 }
+.doctorDiv{
+  margin-left: 10%;
+}
 .fotodoctor{
-  background: url('https://goo.gl/8mDtJQ');
   width: 300px;
   height: 300px;
   box-shadow: 0 2px 4px #2cd3b4, 0 -2px 4px #3d72aa;
@@ -26,10 +28,4 @@ h2{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
-p{
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  line-height: 24px;
-  padding: 10px;
-  text-align: justify;
-}
+
