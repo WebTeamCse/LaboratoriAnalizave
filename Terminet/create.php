@@ -21,9 +21,9 @@
                 <div>
                     <select class="selectgender" name="selectdoctor"> 
                         <option>No one</option>
-                        <option>Filan</option>
-                        <option>Fisteku</option>
-                        <option>Fidan</option>
+                        <option>Njazi Luma</option>
+                        <option>Bardh Krasniqi</option>
+                        <option>Agim Bytyqi</option>
                     </select>
                 </div>
                 <input type="email" placeholder="Email Address" name="email">
