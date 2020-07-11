@@ -1,25 +1,19 @@
 
 function validateForm() {
-    var x = document.forms["form"]["sms"].value;
+    var text = getElementById("sms");
+    
       // let includex = x.include("+");
       // if(includex == true){
       //     alert("includex "+includex);
           
       // }
-    
-  
-      if (x == "" ) {
-          alert("sms must be filled out");
-          return false;
-        }
-  
-      if(x.indexOf("+")>=0 || x.indexOf("*")>=0 || x.indexOf("/")>=0 || x.indexOf("#")>=0) {
-          alert("sms shoulden\'t contains one of these (* + / #)");
-            return false;
+      if(text.value.trim() === ""){
+       alert("name is null"); 
+       return false;
       }
-      
-    
-      alert("All Data Submitted Successfully!");
-      event.preventDefault();
+      return true;
+      // alert("All Data Submitted Successfully!");
+      // event.preventDefault();
+      //window.location.href="LaboratoriAnalizave/Home/indexFP.php";
       
     }

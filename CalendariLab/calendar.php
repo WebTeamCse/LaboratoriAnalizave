@@ -1,3 +1,6 @@
+<?php
+  // include "../Login/login-sherbimet.php";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,8 +9,9 @@
     </head>
     <body onload="RenderDate()">
     <?php
-    include "../header.php";
+    include "../headers.php";
     ?>
+    
         <div class="wrapper">
             <div class="calendar">
                 <div class="month">
@@ -72,13 +76,18 @@
             </div>
         </div>
         <script src="calendar.js"></script>
-        
+
         <div class = "notes">
             <input type = "text" placeholder = "Notes"> </input>  
         </div>
+        <div class = "submit">
+        <input type = "submit " >
+</div>
+<div>
 
-
-        <script>
+ 
+</div>
+        <script> 
                 
                 $('.toggle').click(function() {
         
@@ -88,11 +97,58 @@
                     
                 
         </script>
-        
+
         <?php
-                include "../footer.php";
+        include("config.php");
+        if(isset($_POST['btn-add']))
+        {
+            $name = $_POST["user_name"];
+            
+           $image=$_FILES['profile']['name'];
+            $name1=$_FILES['profile']['name'];
+            $tmp_dir=$_FILES['profile']['tmp_name'];
+           // $imageSize=$_FILES['profile']['size'];
+            // var_dump($_FILES['profile']['name']);
+            // var_dump($_FILES['profile']['name']);
+            // var_dump($_FILES['profile']['tmp_name']);
+            // var_dump($_FILES['profile']['size']);
+            
+
+           $upload_dir='CalendariLab' ;
+           $imgExt=strtolower(pathinfo($image,PATHINFO_EXTENSION));
+          // $valid_extensions=array('jpeg','jpg','png','gif','pdf');
+           $picProfile=rand(1000,1000000).".".$imgExt;
+           move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
+
+            $stmt=$db_conn->prepare('INSERT INTO  Upload(username,picProfile)VALUES(:uname,:upic) LIMIT 1');
+            $stmt->bindParam(':uname',$name);
+            $stmt->bindParam(':upic',$picProfile);
+            $stmt->execute();
+            // header('Location:calendar.php');
+            // exit();
+            
+
+        }
+       ?>
+        <div class= "container">
+            <div class ="add-form">
+                <h1 class="text-center">Please Insert new Item image</h1>
+                <form  action= "calendar.php" method="post" enctype="multipart/form-data">
+                <label>User Name</label>
+                <input type ="text" name="user_name" class="form-control" required="">
+                <label>Picture</label>
+                <input type="file" name="profile" class="form-cotrol" required="" accept="*/image">
+                <button type ="submit" name="btn-add"> Add New </button>
+                    </form>
+                    </div>
+                    </div>
+
+
+            <footer>
+            <?php
+                 include "../footer.php";
             ?>
-        
+            </footer>
         
     </body>
 </html>
