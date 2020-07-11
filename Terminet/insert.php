@@ -4,7 +4,7 @@
 
 if(isset($_POST['submit']))
 {
-    if(empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['selectdoctor']) || empty($_POST['email'])){
+    if(empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['selectdoctor']) || empty($_POST['email'] || empty($_POST['date'] ))){
         
         echo 'Please fill in the Blanks ';
     }
@@ -13,8 +13,9 @@ if(isset($_POST['submit']))
         $phone = $_POST['phone'];
         $doctor = $_POST['selectdoctor'];
         $useremail = $_POST['email'];
+        $date = $_POST['date'];
         
-        $query = " insert into  terminet (userName,phone,doctor,useremail) values('$userName','$phone','$doctor','$useremail')";
+        $query = " insert into  terminet (userName,phone,doctor,useremail,date) values('$userName','$phone','$doctor','$useremail','$date')";
         $result = mysqli_query($db,$query);
 
         if($result){

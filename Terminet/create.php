@@ -13,7 +13,7 @@
         <div class="content">
             <img src="../img/terminimage.jpg" alt="header-image" class="cld-responsive">
          
-            <form action="insert.php" method="post">
+            <form action="insert.php" method="post" class="terminetform">
                 <input type="text" placeholder="Name & Surname" name="name">
                 <div class="beside">
                     <input type="text" placeholder="Phone Number" name="phone">
@@ -27,8 +27,10 @@
                     </select>
                 </div>
                 <input type="email" placeholder="Email Address" name="email">
+                
+                <input type="date" id="date" name="date">
                 <div class="createbutton">
-                    <button type="submit" name="submit">Submit</button>
+                    <button type="submit" name="submit">Create</button>
                 </div>
             </form>
         </div>

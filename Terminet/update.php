@@ -8,10 +8,11 @@ require_once("connection.php");
     $userID = $_GET['ID'];
     $userName = $_POST['name'];
     $phone = $_POST['phone'];
-    $doctor = $_POST['doctor'];
-    $useremail = $_POST['useremail'];
+    $doctor = $_POST['selectdoctor'];
+    $useremail = $_POST['email'];
+    $date = $_POST['date'];
 
-    $query = " update terminet set userName = '".$userName."', phone='".$phone."', doctor='".$doctor."', useremail='".$useremail."' where userID='".$userID."'";
+    $query = " update terminet set userName = '".$userName."', phone='".$phone."', doctor='".$doctor."', useremail='".$useremail."',date='".$date."' where userID='".$userID."'";
     $result = mysqli_query($db,$query);
  
 

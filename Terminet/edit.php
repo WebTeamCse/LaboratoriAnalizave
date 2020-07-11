@@ -33,7 +33,7 @@
         <div class="content">
             <img src="../img/terminimage.jpg" alt="header-image" class="cld-responsive">
          
-            <form action="update.php?ID=<?php echo $userID ?>" method="post">
+            <form action="update.php?ID=<?php echo $userID ?>" method="post" class="terminetform">
                 <input type="text" placeholder="Name & Surname" name="name" value="<?php echo $userName ?>">
                 <div class="beside">
                     <input type="text" placeholder="Phone Number" name="phone" value="<?php echo $phone ?>">
@@ -47,6 +47,7 @@
                     </select>
                 </div>
                 <input type="email" placeholder="Email Address" name="email" value="<?php echo $useremail ?>">
+                <input type="date" id="date" name="date" value="<?php echo $date ?>">
                 <div class="createbutton">
                     <button type="update" name="update">Update</button>
                 </div>

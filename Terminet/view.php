@@ -30,6 +30,7 @@
                     <th>Phone</th>
                     <th>Email</th>
                     <th>Doktor</th>
+                    <th>Date</th>
                     <th class="createtermin"><button type="button" onclick="window.location.href='http://localhost/LaboratoriAnalizave/Terminet/create.php';">Create</button></th>
                 </tr>
                 
@@ -40,6 +41,7 @@
                       $phone = $row['phone'];
                       $doctor = $row['doctor'];
                       $useremail = $row['useremail'];
+                      $date = $row['date'];
                   
                ?>
                 <tr>
@@ -48,8 +50,9 @@
                     <td><?php echo $phone?></td>
                     <td><?php echo $doctor?></td>
                     <td><?php echo $useremail?></td>
-                    <td><a href="edit.php?GetID=<?php echo $userID ?>" style="background-color:blue">Edit</button></td>
-                    <td><a href="delete.php?Del=<?php echo $userID ?>" style="background-color:red">Delete</button></td>
+                    <td><?php echo $date?></td>
+                    <td><a href="edit.php?GetID=<?php echo $userID ?>" class="edit_btn">Edit</button></td>
+                    <td><a href="delete.php?Del=<?php echo $userID ?>" class="del_btn">Delete</button></td>
                 </tr>
                 <?php
 
