@@ -6,12 +6,12 @@ if(isset($_SESSION['userid'])){
 // var_dump($id);
 
 }
-var_dump($id);
+//var_dump($id);
 $query = $conn->query("SELECT id , name , email , username
 FROM users WHERE id='$id'");
 $users = $query->fetch();
-var_dump($users);
-print_r($users);
+// var_dump($users);
+// print_r($users);
 
     if(isset($_POST["submit"])){
         $id = $_SESSION['userId'];
