@@ -25,7 +25,7 @@
             <button><a href="edit-users.php">Edit Profile</a></button>
             </div> 
             <?php
-            if($_SESSION['userId'] == 10){
+            if($_SESSION['userId'] == 18){
             include "admin.php";
         }
         }else{
@@ -120,10 +120,11 @@ include "../includes/sliderLA.php";
         if(isset($_SESSION['userId'])){
             //var_dump($_SESSION['userId']);
             include "../Login/profile.php";
+            $_SESSION['userid'] = $_SESSION['userId'];
         }else{
             //header("location:../Home/indexFP.php");
         }
-        $_SESSION['userid'] = $_SESSION['userId'];
+       
         //var_dump($_SESSION['userid']);
             
         ?>

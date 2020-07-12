@@ -52,7 +52,7 @@ $users = $query->fetch();
             <input type="submit" name="submit" value="ruaj shenimet"><br><br>
           
         <p style="color:black;">or</p><br>
-            <a href="#">Change your password</a>
+            <a href="change-password.php">Change your password</a>
 </form>
 
 </div>
