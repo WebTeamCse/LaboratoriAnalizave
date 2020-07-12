@@ -29,12 +29,7 @@
            
         </form>
     </div>
-
-   
-    
-     
-        
-        <?php
+  <?php
             
             // include "../crud/insert-users.php";
         ?> 

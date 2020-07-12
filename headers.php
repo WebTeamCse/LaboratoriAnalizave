@@ -14,7 +14,7 @@ crossorigin="anonymous"></script>
                     <ul>
                         <li><a href="../Home/index.php">Ballina</a></li>
                         <li><a href="../Sherbimet/Sherbimet.php">Shërbimet</a></li>
-                        <li><a href="../Terminet/terminet.php">Terminet</a></li>
+                        <li><a href="../Terminet/view.php">Terminet</a></li>
                         <li><a href="../Doctoret/doctoret.php">Mjekët</a></li>
                         <li><a href="../CalendariLab/calendar.php">Kalendari</a></li>
                         <li><a href="../Location/Location.php">Lokacioni</a></li>

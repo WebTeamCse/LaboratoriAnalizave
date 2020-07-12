@@ -33,26 +33,19 @@ $users = $query->fetch();
         <title>Edit Profile</title>
         <link rel="stylesheet" type="text/css" href="edit-style.css">
         <script type="text/javascript" src="edit-users-script.js"></script> 
-        
-
-
-        
-    
-
-       
-            
+           
 <div class="register">
 
  <form id="form" method="post" onsubmit="return validate()">  
               <h1>Edit your account</h1>
-           <!-- <input type="text" id="id" name="id"  value=" <?php //echo $user['id']; ?> " ><br> -->
+           
             <input type="text" id="name" name="name"  value="<?php echo $users['name']; ?> " ><br>
             <input type="text" name="email" id="email" value="<?php echo $users['email']; ?>" placeholder="Ndryshoni email"><br>
             <input type="text" id="username" name="username" value="<?php echo $users['username']; ?>" placeholder="Ndryshoni username"><br><br>
-            <input type="submit" name="submit" value="ruaj shenimet"><br><br>
+            <input type="submit" name="submit" value="Ruaj Shenimet"><br><br>
           
         <p style="color:black;">or</p><br>
-            <a href="change-password.php">Change your password</a>
+            <a class="changepwd" href="change-password.php">Change your password</a>
 </form>
 
 </div>
