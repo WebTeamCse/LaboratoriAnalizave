@@ -1,62 +1,54 @@
 <?php
 require '../crud/dbconfig.php';
 session_start();
-if(isset($_SESSION['userId'])){
-    //var_dump($_SESSION['userId']);
-    $id = $_SESSION['userId'];
+if(isset($_SESSION['userid'])){
+    $id = $_SESSION['userid'];
+// var_dump($id);
+
 }
+var_dump($id);
+$query = $conn->query("SELECT id , name , email , username
+FROM users WHERE id='$id'");
+$users = $query->fetch();
+var_dump($users);
+print_r($users);
 
-    $sql = 'SELECT * FROM users WHERE id=":id"';
-    $query = $conn->prepare($sql);
-    // $stmt->bindParam('id',$id);
-    $query->execute(['id' => $id]);
-
-    $users = $query->fetchAll();
-    print_r($users);
     if(isset($_POST["submit"])){
+        $id = $_SESSION['userId'];
         $name = $_POST['name'];
         $email = $_POST['email'];
         $username = $_POST['username'];
-
-
-        //var_dump($id) ;
-        
-        $sql = "UPDATE users SET name = :name, email = :email, username = :username WHERE id = '$id'";
+        $sql = 'UPDATE users SET  name = :name, email = :email, username = :username WHERE id = :id';
         $query = $conn->prepare($sql);
-
         $query->bindParam('name',$name);
         $query->bindParam('email',$email);
         $query->bindParam('username',$username);
-        // $query->bindParam('id',$id);
-
+        $query->bindParam('id',$id);
+      
         $query->execute();
-        // $stmt->execute([$name, $email, $username]);
+        header('Location:index.php');
+    } 
 
-        header('Location:edit-users.php');
-        // exit();
-    }
-
-   
 ?>
-<html>
-    <head>
         <title>Edit Profile</title>
         <link rel="stylesheet" type="text/css" href="edit-style.css">
+        <script type="text/javascript" src="edit-users-script.js"></script> 
         
-    </head>
-    <body>
+
+
         
     
-</html>
+
        
             
 <div class="register">
 
- <form id="form" action="edit-users.php" method="post" onsubmit="return validateForm()">  
+ <form id="form" method="post" onsubmit="return validate()">  
               <h1>Edit your account</h1>
-              <input type="text" id="name" name="name"  value="<?php echo $users['name'];?>" placeholder="Ndryshoni emrin"><br>
-            <input type="text" name="email" id="email" value="<?php echo $users['email'];?>" placeholder="Ndryshoni email"><br>
-            <input type="text" id="username" name="username" value="<?php echo $users['username'];?>" placeholder="Ndryshoni username"><br><br>
+           <!-- <input type="text" id="id" name="id"  value=" <?php //echo $user['id']; ?> " ><br> -->
+            <input type="text" id="name" name="name"  value="<?php echo $users['name']; ?> " ><br>
+            <input type="text" name="email" id="email" value="<?php echo $users['email']; ?>" placeholder="Ndryshoni email"><br>
+            <input type="text" id="username" name="username" value="<?php echo $users['username']; ?>" placeholder="Ndryshoni username"><br><br>
             <input type="submit" name="submit" value="ruaj shenimet"><br><br>
           
         <p style="color:black;">or</p><br>
@@ -64,4 +56,3 @@ if(isset($_SESSION['userId'])){
 </form>
 
 </div>
-</body>

@@ -118,10 +118,13 @@ include "../includes/sliderLA.php";
     <div class="section2">
         <?php
         if(isset($_SESSION['userId'])){
+            //var_dump($_SESSION['userId']);
             include "../Login/profile.php";
         }else{
             //header("location:../Home/indexFP.php");
         }
+        $_SESSION['userid'] = $_SESSION['userId'];
+        //var_dump($_SESSION['userid']);
             
         ?>
     </div>
