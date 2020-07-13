@@ -21,7 +21,7 @@ require '../crud/dbconfig.php';
      header("location:view.php");
  }
  else{
-    header("Plase chack you");
+    header("Please");
 }
 
 }
