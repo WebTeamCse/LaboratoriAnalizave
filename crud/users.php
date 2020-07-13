@@ -9,8 +9,8 @@
            sms.content
     FROM users  INNER JOIN sms on users.id = sms.user_id ');
     $users = $query->fetchAll();
-    var_dump($users);
-     print_r($users);
+    // var_dump($users);
+    //  print_r($users);
 
 ?>
     <html>
@@ -26,7 +26,6 @@
                 <th>User Name</th>
                 <th>User Email</th>
                 <th>User SMS</th>
-                <th>Edit User</th> 
                 <!-- <th>Delete User</th> -->
                           
             </tr>
@@ -36,7 +35,6 @@
             <td><?php echo $user['name'];?></td>
             <td><?php echo $user['email'];?></td>
             <td><?php echo $user['content'];?></td>
-            <td class="edit"><a href=""><?php echo "Edit this user"?></a></td>
             <!-- <td class="delete"><a href="delete_user.php><?php echo "Delete this user"?></a></td> -->
 
         </tr>

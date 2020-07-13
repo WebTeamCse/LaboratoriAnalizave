@@ -76,8 +76,23 @@ h1{
   width: 125px;
   height: 30px;
   color: black;
+  background-color: rgb(206, 206, 206);
   cursor: pointer;
+  border:  rgb(66,67,93); 
+  border-radius: 5px;
+}
 
+.buton1:hover{
+  background-color: rgb(206, 206, 206);
+  color: black;
+}
+.buton2:hover{
+  background-color: rgb(66,67,93);
+  color: white;
+}
+a:link{
+  text-decoration: none;
+  
 }
 @media (max-width:1000px) {
   .login{

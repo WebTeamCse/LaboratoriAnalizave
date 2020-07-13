@@ -20,6 +20,8 @@ require '../crud/dbconfig.php';
     }
    
 ?>
+ 
+<h1>Delete a User by ID</h1>
  <form id="form" action="adminPage.php" method="post" onsubmit="return validateForm()">  
         <input type="text" id="id" name="id" placeholder="put the user id"><br>
         <button type="submit" name="delete">Delete</button>  
