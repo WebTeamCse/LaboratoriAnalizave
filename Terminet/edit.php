@@ -1,16 +1,16 @@
 <?php
 
-    require_once("connection.php");
-    $userID = $_GET['GetID'];
+require '../crud/dbconfig.php';
+    $userID = $_GET['id'];
     $query = " select * from terminet where userID='".$userID."'";
-    $result = mysqli_query($db,$query);
+    $result = $conn->query($query);
 
-    while($row=mysqli_fetch_assoc($result)){
-        $userID = $row['userID'];
-        $userName = $row['userName'];
-        $phone = $row['phone'];
-        $doctor = $row['doctor'];
-        $useremail = $row['useremail'];
+    foreach($result as $user){
+        $userID = $user['userID'];
+        $userName = $user['userName'];
+        $phone = $user['phone'];
+        $doctor = $user['doctor'];
+        $useremail = $user['useremail'];
     }
 ?>
 

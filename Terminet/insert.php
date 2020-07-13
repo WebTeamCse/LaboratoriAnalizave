@@ -1,6 +1,6 @@
 <?php 
  
- require_once("connection.php");
+require '../crud/dbconfig.php';
 
 if(isset($_POST['submit']))
 {
@@ -15,8 +15,8 @@ if(isset($_POST['submit']))
         $useremail = $_POST['email'];
         $date = $_POST['date'];
         
-        $query = " insert into  terminet (userName,phone,doctor,useremail,date) values('$userName','$phone','$doctor','$useremail','$date')";
-        $result = mysqli_query($db,$query);
+        $query = " insert into  terminet (userName,phone,doctor,useremail,date) values(:userName,:phone,:doctor,:useremail,:date)";
+        $result = $conn->query($query);
 
         if($result){
             header("location:view.php");

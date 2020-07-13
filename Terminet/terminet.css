@@ -98,9 +98,10 @@ table {
     background-color: #dddddd;
   }
  .tabletermin{
-    width:800px;
+    width:80%;
     border:1px #b8b3b3  solid;
     box-shadow: 5px 10px 18px #557a83;
+    margin-top:-30%;
   }
   
   .createtermin button{

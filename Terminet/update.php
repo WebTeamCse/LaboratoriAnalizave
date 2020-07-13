@@ -1,6 +1,7 @@
 <?php
 
-require_once("connection.php");
+
+require '../crud/dbconfig.php';
 
 
  if(isset($_POST['update'])){
@@ -13,7 +14,7 @@ require_once("connection.php");
     $date = $_POST['date'];
 
     $query = " update terminet set userName = '".$userName."', phone='".$phone."', doctor='".$doctor."', useremail='".$useremail."',date='".$date."' where userID='".$userID."'";
-    $result = mysqli_query($db,$query);
+    $result = $conn->query($query);
  
 
  if($result){
