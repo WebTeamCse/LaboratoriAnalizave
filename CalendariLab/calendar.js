@@ -28,7 +28,7 @@ var prevDate = new Date(
 var today = new Date();
 console.log(today);
 
-var months =[
+var months =[ 
 "January",
 "February",
 "March",
