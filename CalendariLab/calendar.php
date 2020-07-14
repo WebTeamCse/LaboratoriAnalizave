@@ -130,7 +130,7 @@
 
         }
        ?>
-        <div class= "container">
+        <div class= "container">  
             <div class ="add-form">
                 <h1 class="text-center">Please Insert new Item image/file</h1>
                 <form  action= "calendar.php" method="post" enctype="multipart/form-data">
