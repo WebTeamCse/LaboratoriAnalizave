@@ -132,7 +132,7 @@
        ?>
         <div class= "container">
             <div class ="add-form">
-                <h1 class="text-center">Please Insert new Item image</h1>
+                <h1 class="text-center">Please Insert new Item image/file</h1>
                 <form  action= "calendar.php" method="post" enctype="multipart/form-data">
                 <label>User Name</label>
                 <input type ="text" name="user_name" class="form-control" required="">
