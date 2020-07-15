@@ -9,8 +9,8 @@ html, body{
    justify-content:center;
 }
 .content{
-    width:500px;
-    height:400px;
+    width: 800px;
+    height: 500px;
     border:1px #b8b3b3  solid;
     box-shadow: 5px 10px 18px #557a83;
 }
@@ -21,33 +21,43 @@ img{
 .form-title{
     padding:10px 40px 0px;
 }
-form{
+.terminetform{
     padding:0px 40px;
-    margin-top:-10px;
+    margin-top:10px;
 }
 input[type=text], [type=email]{
-    border: none;
-    border-bottom: 1px solid black;
+    border: 1px solid rgb(139, 137, 137);
+    border-radius: 15px;
     outline:none;
     width:100%;
-    margin: 8px 0;
-    padding:10px 0;
+    margin:18px 0;
+    padding:8px 0;
 }
+
 input[type=number]{
-    border: none;
-    border-bottom: 1px solid black;
+    border-radius: 15px;
+    border: 1px solid #cbbebe;
     outline:none;
     margin: 8px 0;
     padding:5px 0;
 }
 
 .selectgender{
-    border: none;
-    border-bottom: 1px solid black;
+    border-radius:15px;
+    border: 1px solid #cbbebe;
     outline:none;
     margin: 8px 0;
     padding:5px 0;
     width:100%;
+}
+#date{
+    border-radius:15px;
+    border: 1px solid #cbbebe;
+    outline:none;
+    margin: 8px 0;
+    padding:5px 0;
+    width:100%;
+
 }
 .beside{
     display:flex;  
@@ -57,7 +67,7 @@ input[type=number]{
     color:#ffffff;
     background-color: #5c8ca4;
     height:40px;
-    width:25%;
+    width:15%;
     margin-top:15px;
     cursor: pointer;
     border:none;
@@ -88,10 +98,10 @@ table {
     background-color: #dddddd;
   }
  .tabletermin{
-    width:800px;
-    height:300px;
+    width:80%;
     border:1px #b8b3b3  solid;
     box-shadow: 5px 10px 18px #557a83;
+    margin-top:-30%;
   }
   
   .createtermin button{
@@ -99,5 +109,20 @@ table {
     background-color: #5c8ca4;
     height:40px;
     width: 90%;
+}
+.edit_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #2E8B57;
+    color: white;
+    border-radius: 3px;
+}
+
+.del_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px;
+    background: #800000;
 }
 

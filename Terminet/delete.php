@@ -1,13 +1,13 @@
 <?php
 
-require_once("connection.php");
+require '../crud/dbconfig.php';
 
 
  if(isset($_GET['Del'])){
 
     $userID = $_GET['Del'];
     $query = " delete from terminet  where userID='".$userID."'";
-    $result = mysqli_query($db,$query);
+    $result = $conn->query($query);
  
 
  if($result){

@@ -1,20 +1,18 @@
 <?php
 
-    require_once("connection.php");
-    $userID = $_GET['GetID'];
+require '../crud/dbconfig.php';
+    $userID = $_GET['id'];
     $query = " select * from terminet where userID='".$userID."'";
-    $result = mysqli_query($db,$query);
+    $result = $conn->query($query);
 
-    while($row=mysqli_fetch_assoc($result)){
-        $userID = $row['userID'];
-        $userName = $row['userName'];
-        $phone = $row['phone'];
-        $doctor = $row['doctor'];
-        $useremail = $row['useremail'];
+    foreach($result as $user){
+        $userID = $user['userID'];
+        $userName = $user['userName'];
+        $phone = $user['phone'];
+        $doctor = $user['doctor'];
+        $useremail = $user['useremail'];
     }
 ?>
-
-
 
 
 
@@ -26,14 +24,14 @@
 </head>
 
 <body>
-    <?php
- include '../header.php';
- ?>
+<?php
+    include "../headers.php";
+    ?>
     <div class="container">
         <div class="content">
             <img src="../img/terminimage.jpg" alt="header-image" class="cld-responsive">
          
-            <form action="update.php?ID=<?php echo $userID ?>" method="post">
+            <form action="update.php?ID=<?php echo $userID ?>" method="post" class="terminetform">
                 <input type="text" placeholder="Name & Surname" name="name" value="<?php echo $userName ?>">
                 <div class="beside">
                     <input type="text" placeholder="Phone Number" name="phone" value="<?php echo $phone ?>">
@@ -41,12 +39,13 @@
                 <div>
                     <select class="selectgender" name="selectdoctor" value="<?php echo $doctor ?>"> 
                         <option>No one</option>
-                        <option>Filan</option>
-                        <option>Fisteku</option>
-                        <option>Fidan</option>
+                        <option>Njazi Luma</option>
+                        <option>Bardh Krasniqi</option>
+                        <option>Agim Bytyqi</option>
                     </select>
                 </div>
                 <input type="email" placeholder="Email Address" name="email" value="<?php echo $useremail ?>">
+                <input type="date" id="date" name="date" value="<?php echo $date ?>">
                 <div class="createbutton">
                     <button type="update" name="update">Update</button>
                 </div>

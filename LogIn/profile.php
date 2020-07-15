@@ -4,7 +4,7 @@
     $userId = $_SESSION['userId'];
     $stmt = $conn->query("SELECT * FROM users WHERE id = " . $userId);
     $userInfo = $stmt->fetchAll();
-
+    //var_dump($_SESSION['userId']);
 
   
  ?>

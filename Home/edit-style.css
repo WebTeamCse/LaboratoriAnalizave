@@ -1,0 +1,124 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+  }
+  body{
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: center;
+    background-size: 100% 100%;
+    color: white;
+    background-image: url(../img/back.png) ;
+    height: 100vh;
+    background-color: black;
+  }
+  
+
+.register{
+  color: white;
+  text-align: center;
+  margin-top:0px;
+  color: rgba(220, 148, 150,1);
+  padding: 0px;
+  list-style-type: none;
+  border-radius: 30px;
+  
+}
+
+ form{
+  width: 700px;
+  height:99vh;
+  margin-left: auto;
+  margin-right: auto;
+  border: white solid ;
+  background-color: white;
+  
+}
+p{
+  color: rgb(255,255,255);
+
+}
+
+input[type="text"],[type="password"]{
+    font-size: 15px;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    border: white;
+    border-bottom: 2.5px solid rgb(233,233,240);
+    background-color: transparent;
+    color: rgb(67,66,93);
+}
+h1{
+ margin-top: 185px;
+ color: rgb(67,66,93);
+}
+a:link{
+  text-decoration: none;
+  
+}
+.changepwd{
+  width: 165px;
+  height: 30px;
+  color :white;
+  font-weight: bold;
+  background-color:  rgb(144, 144, 158);
+  border-radius: 5px;
+  padding: 6px 3px 6px 3px;
+  margin-top: 17px;
+
+}
+input[type="submit" i]{
+  width: 165px;
+  height: 30px;
+  background-color: rgb(144, 144, 158);
+  border:  rgb(66,67,93);
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  font-weight: bold;
+  margin-top: 17px;
+}
+input[type="submit" i]:hover{
+  cursor: pointer;
+  background-color: rgb(87, 87, 119);
+}
+.changepwd:hover{
+  cursor: pointer;
+  background-color: rgb(87, 87, 119);
+}
+.btn{
+  margin-top: 90px;
+}
+button.btn-1{
+  
+
+  width: 125px;
+  height: 30px;
+  background-color: rgb(144, 144, 158);
+  border:  rgb(66,67,93);
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  margin-top: -7px;
+  
+}
+button.btn-1:hover{
+  cursor: pointer;
+  background-color: rgb(87, 87, 119);
+}
+@media (max-width:1000px) {
+  .register{
+      
+      width: 100%;
+      position: relative;
+      
+  }
+  form{
+    width: 100%;
+      position: relative;
+  }
+  
+}

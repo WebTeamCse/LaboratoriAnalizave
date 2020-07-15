@@ -1,6 +1,7 @@
 <?php
 
-require_once("connection.php");
+
+require '../crud/dbconfig.php';
 
 
  if(isset($_POST['update'])){
@@ -8,18 +9,19 @@ require_once("connection.php");
     $userID = $_GET['ID'];
     $userName = $_POST['name'];
     $phone = $_POST['phone'];
-    $doctor = $_POST['doctor'];
-    $useremail = $_POST['useremail'];
+    $doctor = $_POST['selectdoctor'];
+    $useremail = $_POST['email'];
+    $date = $_POST['date'];
 
-    $query = " update terminet set userName = '".$userName."', phone='".$phone."', doctor='".$doctor."', useremail='".$useremail."' where userID='".$userID."'";
-    $result = mysqli_query($db,$query);
+    $query = " update terminet set userName = '".$userName."', phone='".$phone."', doctor='".$doctor."', useremail='".$useremail."',date='".$date."' where userID='".$userID."'";
+    $result = $conn->query($query);
  
 
  if($result){
      header("location:view.php");
  }
  else{
-    header("Plase chack you");
+    header("Please");
 }
 
 }

@@ -7,7 +7,7 @@
      $username=$_POST['uname'];
     $password=$_POST['pwd'];
     $userInformation = array($username, $password);
-    var_dump($userInformation);
+    //var_dump($userInformation);
     if(empty($username) || empty($password)){        header("Location: indexLog.php?error=emptyFields");
         exit();
     }
@@ -15,7 +15,7 @@
     $stmt->bindParam(":username",$username);
     $stmt->execute();
     $usercount = $stmt->fetchColumn();
-    var_dump($usercount);
+   ///// var_dump($usercount);
     if($usercount == 0){
         header("Location: indexLog.php?error=usernameNotFoundOrIncorrectPassword");
         exit();

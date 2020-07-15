@@ -1,8 +1,10 @@
 <?php 
  
- require_once("connection.php");
+require '../crud/dbconfig.php';
+    
  $query = "select * from terminet ";
- $result = mysqli_query($db,$query);
+ $result = $conn->query($query);
+ 
 ?>
 
 
@@ -15,8 +17,8 @@
 
 <body>
     <?php
- include '../header.php';
- ?>
+    include "../headers.php";
+    ?>
 
     <div class="container">
 
@@ -24,45 +26,37 @@
 
             <table>
                 <tr>
-                
+
                     <th>ID</th>
                     <th>Name & Surname</th>
                     <th>Phone</th>
                     <th>Email</th>
                     <th>Doktor</th>
-                    <th class="createtermin"><button type="button" onclick="window.location.href='http://localhost/LaboratoriAnalizave/Terminet/create.php';">Create</button></th>
+                    <th>Date</th>
+                    <th class="createtermin"><button type="button"
+                            onclick="window.location.href='http://localhost/LaboratoriAnalizave/Terminet/create.php';">Create</button>
+                    </th>
                 </tr>
-                
-                <?php 
-                  while($row=mysqli_fetch_assoc($result)){
-                      $userID = $row['userID'];
-                      $userName = $row['userName'];
-                      $phone = $row['phone'];
-                      $doctor = $row['doctor'];
-                      $useremail = $row['useremail'];
-                  
-               ?>
-                <tr>
-                    <td><?php echo $userID?></td>
-                    <td><?php echo $userName?></td>
-                    <td><?php echo $phone?></td>
-                    <td><?php echo $doctor?></td>
-                    <td><?php echo $useremail?></td>
-                    <td><a href="edit.php?GetID=<?php echo $userID ?>" style="background-color:blue">Edit</button></td>
-                    <td><a href="delete.php?Del=<?php echo $userID ?>" style="background-color:red">Delete</button></td>
-                </tr>
-                <?php
 
-                  }
-                  ?>
+                <?php foreach($result as $user):?>
+                <tr>
+                    <td><?php echo $user['userID']?></td>
+                    <td><?php echo $user['userName']?></td>
+                    <td><?php echo $user['phone']?></td>
+                    <td><?php echo $user['useremail']?></td>
+                    <td><?php echo $user['doctor']?></td>
+                    <td><?php echo $user['date']?></td>
+                    <td><a href="edit.php?id=<?php echo $user['userID']?>" class="edit_btn">Edit</a></td>
+                    <td><a href="delete.php?Del=<?php echo $user['userID']?>" class="del_btn">Delete</a></td>
+                </tr>
+                <?php endforeach;?>
 
             </table>
         </div>
     </div>
-
     <?php
- include '../footer.php';
- ?>
+  include '../footer.php';
+  ?>
 </body>
 
 </html>
