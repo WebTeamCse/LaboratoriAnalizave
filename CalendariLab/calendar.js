@@ -10,9 +10,9 @@ var endDate = new Date(
     dt.getMonth() + 1,
     0
 ).getDate();
+ 
 
-
-var endDate = new Date(
+var endDate = new Date( 
     dt.getFullYear(),
     dt.getMonth() + 1,
     0 
@@ -28,10 +28,10 @@ var prevDate = new Date(
 var today = new Date();
 console.log(today);
 
-var months =[
+var months =[ 
 "January",
 "February",
-"March",
+"March", 
 "April",
 "May",
 "June",
