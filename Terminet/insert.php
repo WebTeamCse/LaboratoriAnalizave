@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
         $useremail = $_POST['email'];
         $date = $_POST['date'];
         
-        $query = " insert into  terminet (userName,phone,doctor,useremail,date) values(:userName,:phone,:doctor,:useremail,:date)";
+        $query = " INSERT INTO  terminet (userName,phone,doctor,useremail,date) VALUES (:userName,:phone,:doctor,:useremail,:date)";
         $result = $conn->query($query);
 
         if($result){
