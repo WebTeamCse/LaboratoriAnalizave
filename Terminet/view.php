@@ -9,9 +9,7 @@ require '../crud/dbconfig.php';
  
 ?>
 
-<?php
-  include "../Login/login-sherbimet.php";
-?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +36,7 @@ require '../crud/dbconfig.php';
                     <th>Doktor</th>
                     <th>Date</th>
                     <th class="createtermin"><button type="button"
-                            onclick="window.location.href='Terminet/create.php';">Create</button>
+                            onclick="window.location.href='create.php';">Create</button>
                     </th>
                 </tr>
 
