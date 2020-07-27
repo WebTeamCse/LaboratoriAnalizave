@@ -24,6 +24,11 @@
                 <form class="form" id="form" onsubmit="return validate()" action="welcome.php" method="post" >
                     <h1>Log In</h1>
                     <p>Welcome back! Please login to your account.</p>
+                    <?php
+                            if(isset($_GET['error'])){
+                                if($_GET['error'] == "usernameNotFoundOrIncorrectPassword"){
+                                    echo "<p style=\"color:red\" >Username Not Found Or Incorrect Password</p>";
+                                }}?>
                  
                         <input type="text" id="email" name="uname" placeholder="Username">
                         <br>
@@ -32,12 +37,14 @@
                         <button class="buton1" type="submit" name="login" value="login">Login</button>
                         <button class="buton2" ><a href="../Register/indexRegister.php" target="_blank">Register</button>
                     </div>
+
                         
                 </form>
-                <?php
-
-                    
-                ?>
+                 <?php
+             if(isset($_GET['error'])){
+            if($_GET['error'] == "SuccessfullyRegistered"){
+                echo '<script>alert("Successfully Registered");</script>';
+            }}?>
             
         </div> 
     

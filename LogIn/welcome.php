@@ -8,7 +8,8 @@
     $password=$_POST['pwd'];
     $userInformation = array($username, $password);
     //var_dump($userInformation);
-    if(empty($username) || empty($password)){        header("Location: indexLog.php?error=emptyFields");
+    if(empty($username) || empty($password)){       
+         header("Location: indexLog.php?error=emptyFields");
         exit();
     }
     $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE username = :username");
@@ -31,7 +32,7 @@
 
         if($passwordCheck !== true){
             header("Location: indexLog.php?error=usernameNotFoundOrIncorrectPassword");
-            exit();
+            // exit();
         }else{
             $query = $conn->prepare('SELECT * FROM users WHERE username = :username');
 

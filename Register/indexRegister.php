@@ -22,20 +22,28 @@
             <input type="text" id="name" name="name" placeholder="Shenoni emrin"><br>
             <input type="text" name="email" id="email" placeholder="Shenoni email"><br>
             <p id="demo"> v </p>
-            <input type="text" id="username" name="username" placeholder="Shenoni username"><br>
+            <?php
+            if(isset($_GET['error'])){
+                if($_GET['error'] == "nameAlreadyTaken"){
+                    echo "<p style=\"color:red\" >Username Already Taken</p>";
+                }}?>
+           
+           <input type="text" id="username" name="username" placeholder="Shenoni username"><br>
+           <?php
+           if(isset($_GET['error'])){
+                if($_GET['error'] == "passwordShouldHaveAtLeast8Charactes"){
+                    echo "<p style=\"color:red\" >Password Should Have At Least 8 Charactes</p>";
+                }}?>
             <input type="password" id="password" name="password" placeholder="Shenoni password"><br>
             <input type="submit" name="submit" value="ruaj shenimet">
-            
+           
+           
+           
             </div>   
            
         </form>
     </div>
-  <?php
-            
-            // include "../crud/insert-users.php";
-        ?> 
-      
-
+    
     </body>
  
 </html>
@@ -59,6 +67,7 @@
          
          header("Location: indexRegister.php?error=nameAlreadyTaken");
          exit();
+        }
      }
      
 
@@ -84,10 +93,9 @@
             'password' => $hashedPassword
         ]);
 
-        header("Location: ../Login/indexLog.php");
-
+        header("Location: ../Login/indexLog.php?error=SuccessfullyRegistered");
+      
         
         
     }
-    
     ?>
