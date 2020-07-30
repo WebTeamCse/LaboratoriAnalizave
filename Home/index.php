@@ -56,14 +56,11 @@
                 'user_id' => $_SESSION['userId']
             ]);
     
-            echo '<script language="javascript">window.location.href ="index.php"</script>';
+            echo '<script language="javascript">window.location.href ="index.php?alert=success"</script>';
+         // header("Location: index.php?alert=success");
         }
     ?>     
-    <?php if(isset($_SESSION['userId'])) : ?>
-        <!-- <div class="edit"> 
-            <button><a href="edit-users.php">Edit Profile</a></button>
-            </div>   -->
-            <?php endif; ?>
+   
 
             
             <div class="container">
@@ -76,8 +73,20 @@
     <div class="talk">
         <p>Talk to an expert <br>+383 44 256 990</p>
     </div>
-    <ul class="email">
-        
+    <!-- <ul class="email">-->
+    <?php if(isset($_SESSION['userId'])) : ?>
+        <ul class="email">
+    <?php
+        if(isset($_GET['alert'])){
+                if($_GET['alert'] == "success"){
+                    echo '<p style="color:green;font-weight:bold;">Successfully Sent</p>';
+                }
+             }  
+             if(is_null($_SESSION['userId'])){
+                 echo '<p style="color:red;font-weight:bold;">u should login first</p>';
+
+          }
+            ?>
         <li> <p>Kontaktoni me ne! </p> </li> 
 
         <form id="form" action="index.php" method="post" onsubmit="return validateForm()">  
@@ -85,6 +94,27 @@
         <li><button class="send" type="submit" name="submit">Dërgo</button></li>             
         </form>
     </ul>         
+            <?php endif; ?>
+    <!-- ///ok -->
+    <?php
+        // if(isset($_GET['alert'])){
+        //         if($_GET['alert'] == "success"){
+        //             echo '<p style="color:red;font-weight:bold;">Successfully Sent</p>';
+        //         }
+        //      }  
+            //  if(is_null($_SESSION['userId'])){
+            //     echo '<p style="color:red;font-weight:bold;">u should login first</p>';
+
+            //  }
+            ?>
+        <!-- <li> <p>Kontaktoni me ne! </p> </li> 
+
+        <form id="form" action="index.php" method="post" onsubmit="return validateForm()">  
+        <li><input type="text" id="sms" name="sms" placeholder="SMS for any problem"></li>
+        <li><button class="send" type="submit" name="submit">Dërgo</button></li>             
+        </form> -->
+    </ul>         
+
 </section>
 <?php
 include "../includes/sliderLA.php";
