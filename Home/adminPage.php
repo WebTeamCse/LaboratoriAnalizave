@@ -10,7 +10,7 @@
     <h1>Admin Page</h1>
     <hr>
     <div class="delete-user">
-        <?php include"delete-user.php";?>
+        <?php include "delete-user.php";?>
     </div>
     
     <hr>

@@ -13,8 +13,8 @@
 <body>
     <div >
         <ul class="connect">
-            <li class="login"> <a href="../LogIn/indexLog.php">Log In </a></li>
-            <li class="signup"> <a href="../Register/indexRegister.php">Sign Up</a></li>
+            <li class="login"> <a href="../LogIn/indexLog.php" target=_blank>Log In </a></li>
+            <li class="signup"> <a href="../Register/indexRegister.php" target=_blank>Sign Up</a></li>
         </ul>
     </div>
 </body>

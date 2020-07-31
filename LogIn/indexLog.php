@@ -44,7 +44,8 @@
              if(isset($_GET['error'])){
             if($_GET['error'] == "SuccessfullyRegistered"){
                 echo '<script>alert("Successfully Registered");</script>';
-            }}?>
+             }
+            }?>
             
         </div> 
     
