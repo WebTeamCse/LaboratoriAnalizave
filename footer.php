@@ -2,9 +2,9 @@
 <footer>
             
             <ul >
-               <li><a href="#"><img src="../img/instagram.png"></a></li>
-               <li><a href="#"><img src="../img/facebook.png"></a></li>
-               <li><a href="#"><img src="../img/wifi.png"></a></li>   
+               <li><a href="https://www.facebook.com"><img src="../img/instagram.png"></a></li>
+               <li><a href="https://www.instagram.com/?hl=en"><img src="../img/facebook.png"></a></li>
+               <li><a href="https://www.speedtest.net/"><img src="../img/wifi.png"></a></li>   
            </ul >
            <div>
            <p>Copyright © 2020 Laboratori i Analizave</p>
