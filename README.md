@@ -1,3 +1,0 @@
-HEllo Elon
-
-HEllo Artushinjo
