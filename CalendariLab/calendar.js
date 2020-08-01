@@ -5,7 +5,7 @@ function  RenderDate(){
 dt.setDate(1);
 var day = dt.getDay();
 
-var endDate = new Date(
+var endDate = new Date( 
     dt.getFullYear(),
     dt.getMonth() + 1,
     0

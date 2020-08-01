@@ -77,15 +77,10 @@
         </div>
         <script src="calendar.js"></script>
 
-        <div class = "notes">
-            <input type = "text" placeholder = "Notes"> </input>  
-        </div>
-        <div class = "submit">
-        <input type = "submit " >
+        
+        
 </div>
 <div>
-
- 
 </div>
         <script> 
                 
@@ -119,10 +114,13 @@
           // $valid_extensions=array('jpeg','jpg','png','gif','pdf');
            $picProfile=rand(1000,1000000).".".$imgExt;
            move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
-
-            $stmt=$db_conn->prepare('INSERT INTO  Upload(username,picProfile)VALUES(:uname,:upic) LIMIT 1');
+            $userID = $_SESSION["userId"];
+            $stmt=$db_conn->prepare('INSERT INTO  Upload(username,picProfile,user_ID)VALUES(:uname,:upic,:userID) LIMIT 1');
             $stmt->bindParam(':uname',$name);
             $stmt->bindParam(':upic',$picProfile);
+            $stmt->bindParam(':upic',$picProfile);
+            $stmt->bindParam(':userID',$userID);
+
             $stmt->execute();
             // header('Location:calendar.php');
             // exit();
@@ -142,7 +140,7 @@
                     </form>
                     </div>
                     </div>
-
+ 
 
             <footer>
             <?php

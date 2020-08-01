@@ -34,7 +34,7 @@ require '../crud/dbconfig.php';
                     <th>Doktor</th>
                     <th>Date</th>
                     <th class="createtermin"><button type="button"
-                            onclick="window.location.href='http://localhost/LaboratoriAnalizave/Terminet/create.php';">Create</button>
+                            onclick="window.location.href='create.php';">Create</button>
                     </th>
                 </tr>
 
