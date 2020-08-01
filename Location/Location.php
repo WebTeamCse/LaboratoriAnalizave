@@ -36,7 +36,7 @@
           <h2>Lipjan</h2>
           <a href="https://www.google.com/maps"> Rruga "Adem Jashari"</a>
           <p>+38349296609</p>
-        </div>
+        </div> 
       </li>
 
       <li>

@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
     }
 }
 
-else{
+else{ 
     header("location:create.php");
 }
 ?>

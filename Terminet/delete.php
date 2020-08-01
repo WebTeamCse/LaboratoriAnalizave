@@ -22,4 +22,4 @@ require '../crud/dbconfig.php';
      header("location:view.php");
  }
 
- ?>
+ ?> 

@@ -68,7 +68,7 @@ require '../crud/dbconfig.php';
                         });
                     
                 
-        </script>
+        </script> 
 </body>
 
 </html>
