@@ -147,6 +147,8 @@ button.logout:hover{
   float: left;
   text-align: center;
   margin-top: 2%;
+  position: relative;
+  margin-left: 27%;
   
 
 }
@@ -161,7 +163,12 @@ margin-right: auto;
 }
 ul.email{
   width: 50%;
-  float: right;
+
+  float: left;
+  text-align: center;
+  margin-top: 2%;
+  position: relative;
+  margin-left: 27%;
 }
 .email li {
   padding: 3px;

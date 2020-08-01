@@ -40,6 +40,16 @@
     <?php
  include '../footer.php';
  ?>
+  <script> 
+                
+                $('.toggle').click(function() {
+        
+                            $('.side-nav').toggleClass('side-nav-open', 500);
+                            $(this).toggleClass('open');
+                        });
+                    
+                
+        </script>
 </body>
 
 </html>

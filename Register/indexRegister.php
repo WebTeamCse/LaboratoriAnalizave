@@ -5,34 +5,45 @@
         <title>Sign Up</title>
         <link rel="stylesheet" type="text/css" href="styleRegister.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" defer src="signup-script.js"></script>
+        <script type="text/javascript" src="signup-script.js">
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"
           integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
           crossorigin="anonymous"></script>
         
     </head>
+    
     <body>
    
     <div class="register">
         <form class="form" onsubmit="return validate()" id="form" action="indexRegister.php" method="post">
               <h1>Register</h1>
               <p> Please login to your account.</p>
-           
-              <input type="text" id="name" name="name" placeholder="Shenoni emrin"><br>
+            <input type="text" id="name" name="name" placeholder="Shenoni emrin"><br>
             <input type="text" name="email" id="email" placeholder="Shenoni email"><br>
-            <input type="text" id="username" name="username" placeholder="Shenoni username"><br>
+            <p id="demo"> v </p>
+            <?php
+            if(isset($_GET['error'])){
+                if($_GET['error'] == "nameAlreadyTaken"){
+                    echo "<p style=\"color:red\" >Username Already Taken</p>";
+                }}?>
+           
+           <input type="text" id="username" name="username" placeholder="Shenoni username"><br>
+           <?php
+           if(isset($_GET['error'])){
+                if($_GET['error'] == "passwordShouldHaveAtLeast8Charactes"){
+                    echo "<p style=\"color:red\" >Password Should Have At Least 8 Charactes</p>";
+                }}?>
             <input type="password" id="password" name="password" placeholder="Shenoni password"><br>
             <input type="submit" name="submit" value="ruaj shenimet">
-            
+           
+           
+           
             </div>   
            
         </form>
     </div>
-  <?php
-            
-            // include "../crud/insert-users.php";
-        ?> 
+    
     </body>
  
 </html>
@@ -52,10 +63,13 @@
      $userCheck = $statment->fetchColumn();
 
      if($userCheck == 1){
+        if(isset($username)){
+         
          header("Location: indexRegister.php?error=nameAlreadyTaken");
          exit();
+        }
      }
-     //exit
+     
 
      //password length not lower then 8
         $passwordlength = strlen($password);
@@ -79,10 +93,9 @@
             'password' => $hashedPassword
         ]);
 
-        header("Location: ../Login/indexLog.php");
-
+        header("Location: ../Login/indexLog.php?error=SuccessfullyRegistered");
+      
         
         
     }
-    
     ?>
