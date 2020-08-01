@@ -7,6 +7,7 @@
            upload.picProfile
     FROM users  INNER JOIN upload on users.id = upload.user_ID ');
     $users = $query->fetchAll();
+     
     // var_dump($users);
     //  print_r($users);
 
@@ -18,7 +19,9 @@
         <body>
           
 
+
         <table class="demo" >
+
             <tr>
                 <th>User ID</th>
                 <th>User Name</th>
