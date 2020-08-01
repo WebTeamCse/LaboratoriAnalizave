@@ -18,14 +18,16 @@
         <div class="fotodoctor"></div>
         <div class="description">
           <h2>Peje</h2>
-          <p> Rruga "Adem Jashari"</p>
+          <a href="https://www.google.com/maps"> Rruga "Adem Jashari"</a>
+          <p>+38349296609</p>
         </div>
       </li>
       <li>
         <div class="fotodoctor"></div>
         <div class="description">
           <h2>Gjakove</h2>
-          <p>Rruga "Adem Jashari"</p>
+          <a href="https://www.google.com/maps"> Rruga "Adem Jashari"</a>
+          <p>+38349296609</p>
         </div>
       </li>
       <li>
@@ -33,15 +35,15 @@
         <div class="description">
           <h2>Lipjan</h2>
           <a href="https://www.google.com/maps"> Rruga "Adem Jashari"</a>
-          <a href="#"> a </a>
+          <p>+38349296609</p>
         </div>
       </li>
 
       <li>
         <div class="fotodoctor"></div>
         <div class="description">
-          <h2>Prishtin</h2>
-          < <a href="https://goo.gl/maps/HhazXcVPSJbPYD3F9"> Rruga "Adem Jashari"</a>
+          <h2>Prishtine</h2>
+           <a href="https://goo.gl/maps/HhazXcVPSJbPYD3F9"> Rruga "Adem Jashari"</a>
           <p>+38349296609</p>
         </div>
       </li>
@@ -49,7 +51,8 @@
         <div class="fotodoctor"></div>
         <div class="description">
           <h2>Ferizaj</h2>
-          <p>Rruga "Adem Jashari"</p>
+          <a href="https://www.google.com/maps"> Rruga "Adem Jashari"</a>
+          <p>+38349296609</p>
         </div>
       </li>
 
@@ -58,7 +61,8 @@
         <div class="fotodoctor"></div>
         <div class="description">
           <h2>Kaqanik</h2>
-          <p></p>
+          <a href="https://www.google.com/maps"> Rruga "Adem Jashari"</a>
+          <p>+38349296609</p>
         </div>
       </li>
     </ul>

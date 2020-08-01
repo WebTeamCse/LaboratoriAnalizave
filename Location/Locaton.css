@@ -10,7 +10,7 @@
     box-shadow: 0 2px 4px #2cd3b4, 0 -2px 4px #3d72aa;
     border-radius: 100%;
     position: relative;
-    left: 8px;
+    left: 49px;
   }
   
   
@@ -20,7 +20,7 @@
     box-shadow: 1px 2px 4px #2cd3b4, -1px 2px 4px #3d72aa;
     position: relative;
     top: -80px;
-    padding:84px 3px 0 2px;
+    padding:84px 110px 0 2px;
     text-align: center;
   }
   h2{
