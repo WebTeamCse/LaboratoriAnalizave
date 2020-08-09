@@ -1,6 +1,6 @@
 <?php
   include "../Login/login-sherbimet.php";
-  require "../crud\dbconfig.php";
+  require "../crud/dbconfig.php";
   $query = $conn->query("Select * from upload");
   $query->execute([]);
 

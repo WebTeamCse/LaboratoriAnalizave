@@ -11,11 +11,7 @@
 
 
 ?>
-<<<<<<< HEAD
     <html> 
-=======
-    <html>
->>>>>>> 3d6380439cecaa9d99c7d7155aaead710568b80d
         <body>
         <table class="demo" >
             <tr>

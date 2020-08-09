@@ -2,11 +2,7 @@
   include "../Login/login-sherbimet.php";
 ?>
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html> 
-=======
-<html>
->>>>>>> 3d6380439cecaa9d99c7d7155aaead710568b80d
 
 <head>
     <title>Calendar</title> 
@@ -17,7 +13,11 @@
     <?php
     include "../headers.php";
     ?>
-
+<?php 
+    if($_SESSION['userId'] ==18){
+        header("Location:calendarAdmin.php");
+    }
+?>
     <div class="wrapper">
         <div class="calendar">
             <div class="month">

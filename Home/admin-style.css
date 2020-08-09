@@ -6,7 +6,7 @@ table.demo{
     
 }
 h1{
-    text-align: center;
+    /* text-align: center; */
 }
 table.demo th{
     background-color: rgb(218, 218, 245);
