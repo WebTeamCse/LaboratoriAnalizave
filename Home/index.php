@@ -14,7 +14,13 @@
 <body>
 <?php
     include "../headers.php";
+    if(isset($_GET['error'])){
+        if($_GET['error'] == "YouMustLogIn"){
+            echo '<script>alert("You Must Log In First");</script>';
+        }
+    }
 ?>
+
 
 <section class="foto">
     <?php 
@@ -37,9 +43,6 @@
 
         //Contact US
         
-        
-    //    $_POST['userID'] = $_SESSION['userId'];
-        //var_dump($_SESSION['userId']);
         if(isset($_POST["submit"])){
             $sms = $_POST['sms'];
 
@@ -95,24 +98,9 @@
         </form>
     </ul>         
             <?php endif; ?>
-    <!-- ///ok -->
     <?php
-        // if(isset($_GET['alert'])){
-        //         if($_GET['alert'] == "success"){
-        //             echo '<p style="color:red;font-weight:bold;">Successfully Sent</p>';
-        //         }
-        //      }  
-            //  if(is_null($_SESSION['userId'])){
-            //     echo '<p style="color:red;font-weight:bold;">u should login first</p>';
-
-            //  }
-            ?>
-        <!-- <li> <p>Kontaktoni me ne! </p> </li> 
-
-        <form id="form" action="index.php" method="post" onsubmit="return validateForm()">  
-        <li><input type="text" id="sms" name="sms" placeholder="SMS for any problem"></li>
-        <li><button class="send" type="submit" name="submit">Dërgo</button></li>             
-        </form> -->
+    
+    ?>
     </ul>         
 
 </section>

@@ -8,7 +8,7 @@ crossorigin="anonymous"></script>
 <div class="navbar">    
                 <div class="logo">
                 <h1>Laboratori<span>Analizave</span></h1>
-                </div>
+                </div> 
 
                 <div class="side-nav">
                     <ul>

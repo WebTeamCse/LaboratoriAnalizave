@@ -2,7 +2,7 @@
 table.demo{
     border-collapse: collapse;
     width: 100%;
-    
+     
     
 }
 h1{
@@ -17,7 +17,7 @@ table.demo th{
     text-align: center;
     padding: 9px;
     margin: 3px;
-   
+    
 }
 
 table.demo td{

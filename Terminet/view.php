@@ -1,5 +1,6 @@
 <?php 
  
+ include "../Login/login-sherbimet.php";
 
 
 require '../crud/dbconfig.php';
@@ -11,7 +12,7 @@ require '../crud/dbconfig.php';
 
 
 <!DOCTYPE html>
-<html>
+<html> 
 
 <head>
     <link rel="stylesheet" type="text/css" href="terminet.css">
@@ -32,7 +33,7 @@ require '../crud/dbconfig.php';
                     <th>ID</th>
                     <th>Name & Surname</th>
                     <th>Phone</th>
-                    <th>Email</th>
+                    <th>Email</th> 
                     <th>Doktor</th>
                     <th>Date</th>
                     <th class="createtermin"><button type="button"
@@ -59,16 +60,14 @@ require '../crud/dbconfig.php';
     <?php
   include '../footer.php';
   ?>
-   <script> 
-                
-                $('.toggle').click(function() {
-        
-                            $('.side-nav').toggleClass('side-nav-open', 500);
-                            $(this).toggleClass('open');
-                        });
-                    
-                
-        </script> 
+    <script>
+        $('.toggle').click(function () {
+
+            $('.side-nav').toggleClass('side-nav-open', 500);
+            $(this).toggleClass('open');
+        });
+    </script>
+
 </body>
 
 </html>
