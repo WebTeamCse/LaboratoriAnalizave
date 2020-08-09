@@ -12,7 +12,7 @@ require '../crud/dbconfig.php';
 
 
 <!DOCTYPE html>
-<html> 
+<html>  
 
 <head>
     <link rel="stylesheet" type="text/css" href="terminet.css">

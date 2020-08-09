@@ -1,7 +1,7 @@
 <?php
 require '../crud/dbconfig.php';
 
-if (isset($_GET['id'])){ 
+if (isset($_GET['id'])){  
     $id = $_GET['id']; 
 $query = $conn->prepare("Delete from upload where user_ID = :user_ID");
     $query->execute([":user_ID"=>$id]);
@@ -11,5 +11,5 @@ $query = $conn->prepare("Delete from upload where user_ID = :user_ID");
     header("Location:calendarAdmin.php?alert=NotDeleted");
 
 }
-
+ 
 ?>  

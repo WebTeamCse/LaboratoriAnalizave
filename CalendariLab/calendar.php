@@ -2,10 +2,14 @@
   include "../Login/login-sherbimet.php";
 ?>
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html> 
+=======
+<html>
+>>>>>>> 3d6380439cecaa9d99c7d7155aaead710568b80d
 
 <head>
-    <title>Calendar</title>
+    <title>Calendar</title> 
     <link rel="stylesheet" href="calendar.css">
 </head>
 
